@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Il mese in M&amp;A · Archivio</title>
+<meta name="description" content="Ottobre 2026 in 132 operazioni M&amp;A: natura, acquirenti, leve strategiche e motivi della vendita, con i deal del mese. A cura di Sante Maiolica.">
+</head>
+<body style="margin:0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,600;1,8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column for the letter and the analysis; charts as labelled bar lists; the month's deals as the same 4:5 posters used on LinkedIn. */
+:root{
+  --bg:#ECEEF2; --paper:#FFFFFF; --fg:#152033; --muted:#5B6474; --rule:#D5D9E1;
+  --accent:#9A6B12; --bar:#13213A; --track:#E3E6EC; --note:#FBF4E4;
+  --p-bg:#13213A; --p-gold:#E9B44C; --p-ivory:#F4EFE6; --p-grey:#8F99AD; --p-sand:#C9C3B8; --p-rule:#2F3B52;
+  --serif:"Source Serif 4","Charter","Bitstream Charter",Georgia,serif;
+  --sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1220; --paper:#121B2C; --fg:#ECE7DD; --muted:#9BA4B6; --rule:#263248;
+  --accent:#E9B44C; --bar:#E9B44C; --track:#1C2638; --note:#1A2333; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1220; --paper:#121B2C; --fg:#ECE7DD; --muted:#9BA4B6; --rule:#263248;
+  --accent:#E9B44C; --bar:#E9B44C; --track:#1C2638; --note:#1A2333; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
+.wrap{max-width:1120px;margin:0 auto}
+.col{max-width:720px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pilot{margin-top:20px;background:var(--note);border:1px solid var(--rule);border-radius:6px;padding:10px 14px;font-size:13.5px;color:var(--muted)}
+header.mast{padding-block:36px 26px;border-bottom:1px solid var(--rule);display:grid;gap:10px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,72px);line-height:1;margin:0;letter-spacing:-.015em}
+h1 em{color:var(--accent);font-style:italic;font-weight:600}
+.dek{font-family:var(--serif);font-size:clamp(19px,2.4vw,23px);line-height:1.35;margin:4px 0 0;max-width:34ch;text-wrap:balance}
+section{padding-block:40px;border-bottom:1px solid var(--rule);display:grid;gap:18px}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(25px,3.4vw,32px);line-height:1.15;margin:0;text-wrap:balance}
+.kick{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+p{margin:0}
+.prose{display:grid;gap:14px}
+.letter{font-family:var(--serif);font-size:19px;line-height:1.6}
+.sig{font-family:var(--serif);font-style:italic;color:var(--muted)}
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.nums{grid-template-columns:1fr}}
+.num{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:18px;display:grid;gap:6px;align-content:start}
+.num b{font-family:var(--serif);font-size:48px;line-height:1;font-weight:700;font-variant-numeric:tabular-nums}
+.num span{font-size:14px;color:var(--muted);line-height:1.4}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.chart{margin:0;background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:18px 18px 14px;display:grid;gap:12px;min-width:0}
+.chart figcaption{font-size:13px;font-weight:600;color:var(--muted)}
+.bars{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.bars li{display:grid;grid-template-columns:minmax(0,11.5em) minmax(0,1fr) 5.2em;gap:10px;align-items:center;font-size:14px}
+@media (max-width:480px){.bars li{grid-template-columns:minmax(0,1fr) 4.8em}.bars .bt{grid-column:1/-1;grid-row:2}}
+.bl{line-height:1.25}
+.bt{height:12px;background:var(--track);border-radius:3px;overflow:hidden}
+.bf{display:block;height:100%;background:var(--bar);border-radius:0 3px 3px 0}
+.bv{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bv small{color:var(--muted);font-size:12.5px}
+.cnote{font-size:12.5px;color:var(--muted);margin:0}
+.levers{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.levers li{display:grid;grid-template-columns:12em minmax(0,1fr);gap:12px;padding-block:10px;border-top:1px solid var(--rule);font-size:15px}
+@media (max-width:560px){.levers li{grid-template-columns:1fr;gap:2px}}
+.levers b{font-weight:600}
+.deals{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:32px 24px}
+.deal{display:grid;gap:10px;align-content:start;min-width:0}
+.deal h3{font-family:var(--serif);font-size:19px;line-height:1.25;margin:0;font-weight:600;text-wrap:balance}
+.deal p{font-size:14.5px}
+.meta{display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.meta .k{color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:11.5px}
+.links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}
+.poster{container-type:inline-size;width:100%;max-width:100%;aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative;
+  background:radial-gradient(70% 55% at 100% 0%,rgba(233,180,76,.16),rgba(233,180,76,0) 70%),var(--p-bg);color:var(--p-ivory)}
+.pin{position:absolute;inset:0;padding:7.4cqw 7.4cqw 6cqw;display:flex;flex-direction:column}
+.p-rule{width:24cqw;border-top:.38cqw solid var(--p-gold)}
+.p-label{font:600 2.3cqw/1 var(--sans);letter-spacing:.38cqw;color:var(--p-gold);margin-top:1.9cqw}
+.p-title{font-family:var(--serif);font-weight:700;font-size:9.6cqw;line-height:1.08;margin-top:5.6cqw}
+.p-title em{color:var(--p-gold);font-style:italic}
+.p-sub{font-size:2.85cqw;line-height:1.45;color:var(--p-sand);margin-top:3.8cqw;max-width:92%}
+.p-low{margin-top:auto;display:grid;gap:2.6cqw}
+.p-svg{width:100%;height:auto;display:block}
+.p-ends{display:flex;justify-content:space-between;gap:4cqw}
+.p-ends div:last-child{text-align:right}
+.p-ends b{display:block;font-size:1.85cqw;letter-spacing:.22cqw;color:var(--p-grey);font-weight:600}
+.p-ends strong{display:block;font-size:3.1cqw;line-height:1.25;margin-top:.8cqw}
+.p-pills{display:flex;flex-wrap:wrap;gap:1.2cqw}
+.p-pills span{font-size:2.2cqw;border:.19cqw solid rgba(244,239,230,.38);border-radius:5cqw;padding:.9cqw 2.2cqw}
+.p-foot{display:flex;justify-content:space-between;gap:3cqw;border-top:.19cqw solid var(--p-rule);padding-top:2.4cqw;font-size:2cqw;color:var(--p-grey)}
+.p-foot b{color:var(--p-ivory)}
+.method{font-size:14px;color:var(--muted);display:grid;gap:10px;border-bottom:0}
+.method h2{font-size:20px;color:var(--fg)}
+.top{display:flex;gap:10px;font-size:13px;padding-top:22px;color:var(--muted)}.top a{color:var(--accent);text-decoration:none}.top a:hover{text-decoration:underline}
+.issues{display:grid;gap:16px;padding-block:32px}.issue{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:22px;display:grid;gap:10px;text-decoration:none;color:var(--fg);max-width:760px}.issue:hover{border-color:var(--accent)}.issue h2{font-size:26px}.issue .go{color:var(--accent);font-weight:600;font-size:14px}.facts{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--muted)}.facts b{color:var(--fg);font-variant-numeric:tabular-nums}</style>
+<div class="wrap">
+  <nav class="top"><a href="./">Portfolio</a></nav>
+  <header class="mast">
+    <div class="eyebrow">Sante Maiolica · M&amp;A Insight</div>
+    <h1>Il mese <em>in M&amp;A</em></h1>
+    <p class="dek">Ogni mese tutte le operazioni del mercato italiano, lette per la strategia che le muove.</p>
+  </header>
+  <main class="issues">
+    <a class="issue" href="newsletter-2026-10.html">
+      <div class="kick">Numero 1 · Ottobre 2026</div>
+      <h2>Si compra per crescere nel proprio mestiere, e chi vende spesso resta a bordo</h2>
+      <div class="facts"><span><b>132</b> operazioni</span><span><b>73%</b> con logica strategica</span><span><b>36</b> venditori che restano</span></div>
+      <span class="go">Leggi il numero →</span>
+    </a>
+  </main>
+</div>
+</body>
+</html>

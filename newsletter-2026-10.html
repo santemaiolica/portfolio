@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Il mese in M&amp;A · Ottobre 2026</title>
+<meta name="description" content="Ottobre 2026 in 132 operazioni M&amp;A: natura, acquirenti, leve strategiche e motivi della vendita, con i deal del mese. A cura di Sante Maiolica.">
+</head>
+<body style="margin:0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,600;1,8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column for the letter and the analysis; charts as labelled bar lists; the month's deals as the same 4:5 posters used on LinkedIn. */
+:root{
+  --bg:#ECEEF2; --paper:#FFFFFF; --fg:#152033; --muted:#5B6474; --rule:#D5D9E1;
+  --accent:#9A6B12; --bar:#13213A; --track:#E3E6EC; --note:#FBF4E4;
+  --p-bg:#13213A; --p-gold:#E9B44C; --p-ivory:#F4EFE6; --p-grey:#8F99AD; --p-sand:#C9C3B8; --p-rule:#2F3B52;
+  --serif:"Source Serif 4","Charter","Bitstream Charter",Georgia,serif;
+  --sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1220; --paper:#121B2C; --fg:#ECE7DD; --muted:#9BA4B6; --rule:#263248;
+  --accent:#E9B44C; --bar:#E9B44C; --track:#1C2638; --note:#1A2333; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1220; --paper:#121B2C; --fg:#ECE7DD; --muted:#9BA4B6; --rule:#263248;
+  --accent:#E9B44C; --bar:#E9B44C; --track:#1C2638; --note:#1A2333; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
+.wrap{max-width:1120px;margin:0 auto}
+.col{max-width:720px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pilot{margin-top:20px;background:var(--note);border:1px solid var(--rule);border-radius:6px;padding:10px 14px;font-size:13.5px;color:var(--muted)}
+header.mast{padding-block:36px 26px;border-bottom:1px solid var(--rule);display:grid;gap:10px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,72px);line-height:1;margin:0;letter-spacing:-.015em}
+h1 em{color:var(--accent);font-style:italic;font-weight:600}
+.dek{font-family:var(--serif);font-size:clamp(19px,2.4vw,23px);line-height:1.35;margin:4px 0 0;max-width:34ch;text-wrap:balance}
+section{padding-block:40px;border-bottom:1px solid var(--rule);display:grid;gap:18px}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(25px,3.4vw,32px);line-height:1.15;margin:0;text-wrap:balance}
+.kick{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+p{margin:0}
+.prose{display:grid;gap:14px}
+.letter{font-family:var(--serif);font-size:19px;line-height:1.6}
+.sig{font-family:var(--serif);font-style:italic;color:var(--muted)}
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.nums{grid-template-columns:1fr}}
+.num{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:18px;display:grid;gap:6px;align-content:start}
+.num b{font-family:var(--serif);font-size:48px;line-height:1;font-weight:700;font-variant-numeric:tabular-nums}
+.num span{font-size:14px;color:var(--muted);line-height:1.4}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.chart{margin:0;background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:18px 18px 14px;display:grid;gap:12px;min-width:0}
+.chart figcaption{font-size:13px;font-weight:600;color:var(--muted)}
+.bars{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.bars li{display:grid;grid-template-columns:minmax(0,11.5em) minmax(0,1fr) 5.2em;gap:10px;align-items:center;font-size:14px}
+@media (max-width:480px){.bars li{grid-template-columns:minmax(0,1fr) 4.8em}.bars .bt{grid-column:1/-1;grid-row:2}}
+.bl{line-height:1.25}
+.bt{height:12px;background:var(--track);border-radius:3px;overflow:hidden}
+.bf{display:block;height:100%;background:var(--bar);border-radius:0 3px 3px 0}
+.bv{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bv small{color:var(--muted);font-size:12.5px}
+.cnote{font-size:12.5px;color:var(--muted);margin:0}
+.levers{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.levers li{display:grid;grid-template-columns:12em minmax(0,1fr);gap:12px;padding-block:10px;border-top:1px solid var(--rule);font-size:15px}
+@media (max-width:560px){.levers li{grid-template-columns:1fr;gap:2px}}
+.levers b{font-weight:600}
+.deals{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:32px 24px}
+.deal{display:grid;gap:10px;align-content:start;min-width:0}
+.deal h3{font-family:var(--serif);font-size:19px;line-height:1.25;margin:0;font-weight:600;text-wrap:balance}
+.deal p{font-size:14.5px}
+.meta{display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.meta .k{color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:11.5px}
+.links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}
+.poster{container-type:inline-size;width:100%;max-width:100%;aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative;
+  background:radial-gradient(70% 55% at 100% 0%,rgba(233,180,76,.16),rgba(233,180,76,0) 70%),var(--p-bg);color:var(--p-ivory)}
+.pin{position:absolute;inset:0;padding:7.4cqw 7.4cqw 6cqw;display:flex;flex-direction:column}
+.p-rule{width:24cqw;border-top:.38cqw solid var(--p-gold)}
+.p-label{font:600 2.3cqw/1 var(--sans);letter-spacing:.38cqw;color:var(--p-gold);margin-top:1.9cqw}
+.p-title{font-family:var(--serif);font-weight:700;font-size:9.6cqw;line-height:1.08;margin-top:5.6cqw}
+.p-title em{color:var(--p-gold);font-style:italic}
+.p-sub{font-size:2.85cqw;line-height:1.45;color:var(--p-sand);margin-top:3.8cqw;max-width:92%}
+.p-low{margin-top:auto;display:grid;gap:2.6cqw}
+.p-svg{width:100%;height:auto;display:block}
+.p-ends{display:flex;justify-content:space-between;gap:4cqw}
+.p-ends div:last-child{text-align:right}
+.p-ends b{display:block;font-size:1.85cqw;letter-spacing:.22cqw;color:var(--p-grey);font-weight:600}
+.p-ends strong{display:block;font-size:3.1cqw;line-height:1.25;margin-top:.8cqw}
+.p-pills{display:flex;flex-wrap:wrap;gap:1.2cqw}
+.p-pills span{font-size:2.2cqw;border:.19cqw solid rgba(244,239,230,.38);border-radius:5cqw;padding:.9cqw 2.2cqw}
+.p-foot{display:flex;justify-content:space-between;gap:3cqw;border-top:.19cqw solid var(--p-rule);padding-top:2.4cqw;font-size:2cqw;color:var(--p-grey)}
+.p-foot b{color:var(--p-ivory)}
+.method{font-size:14px;color:var(--muted);display:grid;gap:10px;border-bottom:0}
+.method h2{font-size:20px;color:var(--fg)}
+.top{display:flex;gap:10px;font-size:13px;padding-top:22px;color:var(--muted)}.top a{color:var(--accent);text-decoration:none}.top a:hover{text-decoration:underline}
+</style>
+<div class="wrap">
+  <nav class="top"><a href="./">Portfolio</a><span>·</span><a href="newsletter.html">Archivio newsletter</a></nav>
+  <header class="mast">
+    <div class="eyebrow">Sante Maiolica · M&amp;A Insight · Numero 1 · Ottobre 2026</div>
+    <h1>Il mese <em>in M&amp;A</em></h1>
+    <p class="dek">Ottobre in 132 operazioni: si compra per crescere nel proprio mestiere, e chi vende spesso resta a bordo.</p>
+  </header>
+
+  <section class="col">
+    <div class="kick">La lettera</div>
+    <div class="prose letter">
+      <p>Ottobre ci ha consegnato 132 operazioni sul mercato italiano. Le ho rilette una per una con una domanda sola: perché si fa questo deal?</p>
+      <p>In tre casi su quattro la risposta è industriale. Si compra per crescere nel proprio mestiere. E il modo più frequente resta aggregare: quasi metà delle operazioni strategiche mette insieme aziende dello stesso settore.</p>
+      <p>I fondi lavorano allo stesso modo. Su 37 operazioni del private equity, 23 aggiungono un'azienda a una piattaforma che già possiedono.</p>
+      <p>Il dato che mi ha colpito di più riguarda chi vende. In 36 operazioni chi vende resta: fondatori, famiglie o manager reinvestono, tengono una quota o continuano a guidare l'azienda. Sempre più spesso vendere vuol dire scegliere un socio per il passo successivo.</p>
+      <p class="sig">Buona lettura, Sante</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="kick">Il mese in tre numeri</div>
+    <div class="nums">
+      <div class="num"><b>132</b><span>operazioni annunciate a ottobre e registrate dal monitor (13 rumor esclusi)</span></div>
+      <div class="num"><b>73%</b><span>con una logica strategica: 96 operazioni tra acquisizioni industriali e add-on di piattaforma</span></div>
+      <div class="num"><b>36</b><span>operazioni in cui chi vende resta socio o alla guida, il 52% di quelle in cui il motivo è noto</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col prose">
+      <div class="kick">1 · Che operazioni sono</div>
+      <h2>Tre su quattro hanno un progetto industriale</h2>
+      <p>Le acquisizioni strategiche di imprese industriali sono 69. A queste si aggiungono 27 add-on: aziende comprate da un gruppo controllato da un fondo per allargare una piattaforma esistente. I buyout puramente finanziari, in cui il fondo entra senza un'aggregazione dichiarata, sono 17. Il resto è fatto di impianti e progetti energetici, aumenti di capitale per crescere e qualche riassetto di aziende in difficoltà.</p>
+    </div>
+    <figure class="chart"><figcaption>Natura dell'operazione · su 132 operazioni</figcaption><ul class="bars"><li title="Strategica: 69 su 132 (52%)"><span class="bl">Strategica</span><span class="bt"><span class="bf" style="width:100.0%"></span></span><span class="bv"><b>69</b> <small>52%</small></span></li><li title="Add-on di piattaforma: 27 su 132 (20%)"><span class="bl">Add-on di piattaforma</span><span class="bt"><span class="bf" style="width:39.1%"></span></span><span class="bv"><b>27</b> <small>20%</small></span></li><li title="Buyout finanziario: 17 su 132 (13%)"><span class="bl">Buyout finanziario</span><span class="bt"><span class="bf" style="width:24.6%"></span></span><span class="bv"><b>17</b> <small>13%</small></span></li><li title="Asset deal: 9 su 132 (7%)"><span class="bl">Asset deal</span><span class="bt"><span class="bf" style="width:13.0%"></span></span><span class="bv"><b>9</b> <small>7%</small></span></li><li title="Capitale per la crescita: 7 su 132 (5%)"><span class="bl">Capitale per la crescita</span><span class="bt"><span class="bf" style="width:10.1%"></span></span><span class="bv"><b>7</b> <small>5%</small></span></li><li title="Riassetto: 3 su 132 (2%)"><span class="bl">Riassetto</span><span class="bt"><span class="bf" style="width:4.3%"></span></span><span class="bv"><b>3</b> <small>2%</small></span></li></ul></figure>
+  </section>
+
+  <section>
+    <div class="col prose">
+      <div class="kick">2 · Chi compra</div>
+      <h2>Industriali in testa, fondi che aggregano</h2>
+      <p>Gli industriali restano i primi acquirenti, con 70 operazioni. Il private equity ne firma 37, e in 23 casi compra per aggiungere un'azienda a una piattaforma: il Gruppo Teco (Sienna) ne ha annunciate sei in un giorno nei servizi per la sicurezza sul lavoro, il Gruppo Everest (Vam Investments) tre nell'impiantistica. Tra gli istituzionali ci sono soprattutto fondi infrastrutturali sulle rinnovabili, oltre a CDP e Berkshire Hathaway.</p>
+    </div>
+    <div class="two">
+      <figure class="chart"><figcaption>Tipo di acquirente · su 132 operazioni</figcaption><ul class="bars"><li title="Industriale: 70 su 132 (53%)"><span class="bl">Industriale</span><span class="bt"><span class="bf" style="width:100.0%"></span></span><span class="bv"><b>70</b> <small>53%</small></span></li><li title="Private equity: 37 su 132 (28%)"><span class="bl">Private equity</span><span class="bt"><span class="bf" style="width:52.9%"></span></span><span class="bv"><b>37</b> <small>28%</small></span></li><li title="Istituzionale o pubblico: 13 su 132 (10%)"><span class="bl">Istituzionale o pubblico</span><span class="bt"><span class="bf" style="width:18.6%"></span></span><span class="bv"><b>13</b> <small>10%</small></span></li><li title="Family office e holding di famiglia: 5 su 132 (4%)"><span class="bl">Family office e holding di famiglia</span><span class="bt"><span class="bf" style="width:7.1%"></span></span><span class="bv"><b>5</b> <small>4%</small></span></li><li title="Imprenditore o persona fisica: 3 su 132 (2%)"><span class="bl">Imprenditore o persona fisica</span><span class="bt"><span class="bf" style="width:4.3%"></span></span><span class="bv"><b>3</b> <small>2%</small></span></li><li title="Non comunicato: 2 su 132 (2%)"><span class="bl">Non comunicato</span><span class="bt"><span class="bf" style="width:2.9%"></span></span><span class="bv"><b>2</b> <small>2%</small></span></li><li title="Venture capital: 2 su 132 (2%)"><span class="bl">Venture capital</span><span class="bt"><span class="bf" style="width:2.9%"></span></span><span class="bv"><b>2</b> <small>2%</small></span></li></ul></figure>
+      <figure class="chart"><figcaption>Cosa fa il private equity · su 37 operazioni</figcaption><ul class="bars"><li title="Add-on di piattaforma: 23 su 37 (62%)"><span class="bl">Add-on di piattaforma</span><span class="bt"><span class="bf" style="width:100.0%"></span></span><span class="bv"><b>23</b> <small>62%</small></span></li><li title="Buyout finanziario: 13 su 37 (35%)"><span class="bl">Buyout finanziario</span><span class="bt"><span class="bf" style="width:56.5%"></span></span><span class="bv"><b>13</b> <small>35%</small></span></li><li title="Capitale per la crescita: 1 su 37 (3%)"><span class="bl">Capitale per la crescita</span><span class="bt"><span class="bf" style="width:4.3%"></span></span><span class="bv"><b>1</b> <small>3%</small></span></li></ul></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="col prose">
+      <div class="kick">3 · Le strategie</div>
+      <h2>Aggregare resta la prima leva</h2>
+      <p>Sulle 96 operazioni con logica strategica, il consolidamento è la leva principale in 44 casi. L'internazionalizzazione viene seconda con 28, e arriva a 35 se si conta anche come leva secondaria. Le operazioni che cambiano il modello di business sono meno frequenti, ma sono spesso le più interessanti da leggere.</p>
+    </div>
+    <div class="two">
+      <figure class="chart"><figcaption>Leva strategica principale · su 96 operazioni</figcaption><ul class="bars"><li title="Consolidamento: 44 su 96 (46%)"><span class="bl">Consolidamento</span><span class="bt"><span class="bf" style="width:100.0%"></span></span><span class="bv"><b>44</b> <small>46%</small></span></li><li title="Internazionalizzazione: 28 su 96 (29%)"><span class="bl">Internazionalizzazione</span><span class="bt"><span class="bf" style="width:63.6%"></span></span><span class="bv"><b>28</b> <small>29%</small></span></li><li title="Riposizionamento tecnologico: 11 su 96 (11%)"><span class="bl">Riposizionamento tecnologico</span><span class="bt"><span class="bf" style="width:25.0%"></span></span><span class="bv"><b>11</b> <small>11%</small></span></li><li title="Integrazione di filiera: 7 su 96 (7%)"><span class="bl">Integrazione di filiera</span><span class="bt"><span class="bf" style="width:15.9%"></span></span><span class="bv"><b>7</b> <small>7%</small></span></li><li title="Diversificazione: 6 su 96 (6%)"><span class="bl">Diversificazione</span><span class="bt"><span class="bf" style="width:13.6%"></span></span><span class="bv"><b>6</b> <small>6%</small></span></li></ul></figure>
+      <ul class="levers">
+        <li><b>Consolidamento</b><span>Il Gruppo Teco aggiunge sei studi di servizi per la sicurezza sul lavoro, da Palermo a Cremona.</span></li>
+        <li><b>Internazionalizzazione</b><span>Grafica Veneta compra le stamperie inglesi di CPI: terza acquisizione estera in cinque anni.</span></li>
+        <li><b>Riposizionamento tecnologico</b><span>Maccaferri compra Iterchimica e Surface Tech per vendere materiali che allungano la vita delle strade.</span></li>
+        <li><b>Integrazione di filiera</b><span>Berti, cereali e mangimi, compra il macello Vicentini Carni e chiude la filiera bovina.</span></li>
+        <li><b>Diversificazione</b><span>MVC (Sportful, Castelli) compra l'inglese Tailfin ed entra nel bikepacking.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="col prose">
+      <div class="kick">4 · Da dove a dove</div>
+      <h2>Un'operazione su cinque arriva dall'estero</h2>
+      <p>Le imprese italiane hanno comprato all'estero 21 volte, soprattutto nel Regno Unito e negli Stati Uniti (4 operazioni ciascuno), in Germania (3) e in Polonia (2). In 17 casi su 21 la leva principale è proprio l'internazionalizzazione. Gli investitori esteri entrati in Italia sono 26: 11 industriali, 9 fondi di private equity e 5 istituzionali, con Stati Uniti, Francia e Regno Unito in testa.</p>
+    </div>
+    <figure class="chart"><figcaption>Direzione dell'operazione · su 132 operazioni</figcaption><ul class="bars"><li title="Italia → Italia: 77 su 132 (58%)"><span class="bl">Italia → Italia</span><span class="bt"><span class="bf" style="width:100.0%"></span></span><span class="bv"><b>77</b> <small>58%</small></span></li><li title="Estero → Italia: 26 su 132 (20%)"><span class="bl">Estero → Italia</span><span class="bt"><span class="bf" style="width:33.8%"></span></span><span class="bv"><b>26</b> <small>20%</small></span></li><li title="Italia → estero: 21 su 132 (16%)"><span class="bl">Italia → estero</span><span class="bt"><span class="bf" style="width:27.3%"></span></span><span class="bv"><b>21</b> <small>16%</small></span></li><li title="Non determinabile: 8 su 132 (6%)"><span class="bl">Non determinabile</span><span class="bt"><span class="bf" style="width:10.4%"></span></span><span class="bv"><b>8</b> <small>6%</small></span></li></ul><p class='cnote'>Non determinabile: acquirente o paese del target non comunicati.</p></figure>
+  </section>
+
+  <section>
+    <div class="col prose">
+      <div class="kick">5 · Settori in movimento</div>
+      <h2>Industria, servizi e food fanno due terzi del mese</h2>
+      <p>Nei servizi alle imprese il private equity è il primo compratore (14 operazioni su 29): sono mercati frammentati, dove si costruiscono gruppi partendo da molti piccoli operatori. Nel food comprano soprattutto gli industriali (12 su 19). Nell'energia pesano di più i fondi infrastrutturali che le imprese.</p>
+    </div>
+    <figure class="chart"><figcaption>Macro-settore del target · su 132 operazioni</figcaption><ul class="bars"><li title="Industria e meccanica: 42 su 132 (32%)"><span class="bl">Industria e meccanica</span><span class="bt"><span class="bf" style="width:100.0%"></span></span><span class="bv"><b>42</b> <small>32%</small></span></li><li title="Servizi alle imprese e alle persone: 29 su 132 (22%)"><span class="bl">Servizi alle imprese e alle persone</span><span class="bt"><span class="bf" style="width:69.0%"></span></span><span class="bv"><b>29</b> <small>22%</small></span></li><li title="Food e agroalimentare: 19 su 132 (14%)"><span class="bl">Food e agroalimentare</span><span class="bt"><span class="bf" style="width:45.2%"></span></span><span class="bv"><b>19</b> <small>14%</small></span></li><li title="Tecnologia e digitale: 12 su 132 (9%)"><span class="bl">Tecnologia e digitale</span><span class="bt"><span class="bf" style="width:28.6%"></span></span><span class="bv"><b>12</b> <small>9%</small></span></li><li title="Energia e ambiente: 12 su 132 (9%)"><span class="bl">Energia e ambiente</span><span class="bt"><span class="bf" style="width:28.6%"></span></span><span class="bv"><b>12</b> <small>9%</small></span></li><li title="Sanità e life science: 7 su 132 (5%)"><span class="bl">Sanità e life science</span><span class="bt"><span class="bf" style="width:16.7%"></span></span><span class="bv"><b>7</b> <small>5%</small></span></li><li title="Logistica e trasporti: 5 su 132 (4%)"><span class="bl">Logistica e trasporti</span><span class="bt"><span class="bf" style="width:11.9%"></span></span><span class="bv"><b>5</b> <small>4%</small></span></li><li title="Turismo e ospitalità: 3 su 132 (2%)"><span class="bl">Turismo e ospitalità</span><span class="bt"><span class="bf" style="width:7.1%"></span></span><span class="bv"><b>3</b> <small>2%</small></span></li><li title="Banche: 3 su 132 (2%)"><span class="bl">Banche</span><span class="bt"><span class="bf" style="width:7.1%"></span></span><span class="bv"><b>3</b> <small>2%</small></span></li></ul></figure>
+  </section>
+
+  <section>
+    <div class="col prose">
+      <div class="kick">6 · Perché si vende</div>
+      <h2>Chi vende, spesso, resta</h2>
+      <p>In 56 operazioni il motivo della vendita non è dichiarato, e in 7 non c'è un venditore perché si tratta di aumenti di capitale. Dove il motivo si conosce, nel 52% dei casi il venditore resta: reinveste nel gruppo che compra, tiene una quota o continua a guidare l'azienda. Trime è passata al terzo fondo in sette anni e il fondatore ha reinvestito ogni volta. In Euro Stampi le cinque famiglie fondatrici tengono il 5% ciascuna. Nel Gruppo Everest i fondatori delle aziende acquisite diventano soci della piattaforma.</p>
+      <p>Il passaggio generazionale compare in modo esplicito una sola volta, con Vicentini Carni dopo la scomparsa del titolare. Probabilmente pesa molto di più, ma raramente si dice. Sette operazioni nascono da una crisi: tra queste Transpack, che ha comprato le aziende del Gruppo Atlante dopo averle gestite in affitto.</p>
+    </div>
+    <figure class="chart"><figcaption>Motivo della vendita · su 69 operazioni in cui è noto</figcaption><ul class="bars"><li title="Il venditore resta socio o alla guida: 36 su 69 (52%)"><span class="bl">Il venditore resta socio o alla guida</span><span class="bt"><span class="bf" style="width:100.0%"></span></span><span class="bv"><b>36</b> <small>52%</small></span></li><li title="Uscita di un investitore: 13 su 69 (19%)"><span class="bl">Uscita di un investitore</span><span class="bt"><span class="bf" style="width:36.1%"></span></span><span class="bv"><b>13</b> <small>19%</small></span></li><li title="Cessione non core: 12 su 69 (17%)"><span class="bl">Cessione non core</span><span class="bt"><span class="bf" style="width:33.3%"></span></span><span class="bv"><b>12</b> <small>17%</small></span></li><li title="Crisi: 7 su 69 (10%)"><span class="bl">Crisi</span><span class="bt"><span class="bf" style="width:19.4%"></span></span><span class="bv"><b>7</b> <small>10%</small></span></li><li title="Passaggio generazionale: 1 su 69 (1%)"><span class="bl">Passaggio generazionale</span><span class="bt"><span class="bf" style="width:2.8%"></span></span><span class="bv"><b>1</b> <small>1%</small></span></li></ul></figure>
+  </section>
+
+  <section>
+    <div class="col prose">
+      <div class="kick">7 · I deal del mese</div>
+      <h2>Cinque operazioni da rileggere</h2>
+      <p>Cinque delle operazioni che ho commentato su LinkedIn a ottobre, scelte perché raccontano leve diverse.</p>
+    </div>
+    <div class="deals"><article class="deal"><div class="poster" role="img" aria-label="La filiera si compra anello per anello."><div class="pin"><div class="p-rule"></div><div class="p-label">M&amp;A · STRATEGIA</div><div class="p-title">La filiera<br>si compra<br><em>anello per anello.</em></div><div class="p-sub">Il Gruppo Berti, cereali e mangimi dal 1968, compra il macello Vicentini Carni e porta in casa l&#x27;ultimo passaggio della filiera bovina.</div><div class="p-low"><svg class="p-svg" viewBox="0 0 460 80" aria-hidden="true"><path d="M18 40 L432 40" fill="none" stroke="#E9B44C" stroke-width="2.4"/><circle cx="18" cy="40" r="9" fill="#13213A" stroke="#E9B44C" stroke-width="2.4"/><circle cx="156" cy="40" r="9" fill="#13213A" stroke="#E9B44C" stroke-width="2.4"/><circle cx="294" cy="40" r="9" fill="#13213A" stroke="#E9B44C" stroke-width="2.4"/><circle cx="432" cy="40" r="9" fill="#E9B44C"/></svg><div class="p-ends"><div><b>VERONA · GRUPPO BERTI</b><strong>~350 mln € di ricavi · dal 1968</strong></div><div><b>SALIZZOLE · VICENTINI CARNI</b><strong>~48.000 bovini l&#x27;anno</strong></div></div><div class="p-pills"><span>Integrazione verticale</span><span>Controllo di filiera</span><span>Continuità d&#x27;impresa</span></div><div class="p-foot"><span><b>Sante Maiolica</b> · M&amp;A Insight</span><span>Fonte: BeBeez, Alimentando</span></div></div></div></div><div class="meta"><span class="k">Integrazione di filiera</span><span>Post del 19 ottobre</span></div><h3>Gruppo Berti → Vicentini Carni</h3><p>Integrazione verticale completa, dal cereale al mangime fino al macello. Chi controlla la catena decide qualità, costi e tracciabilità invece di subirli, in un Paese che produce poco più di un terzo della carne bovina che consuma. L&#x27;operazione garantisce anche la continuità di un&#x27;impresa rimasta senza il suo titolare.</p><div class="links"><a href="https://bebeez.it/agroalimentare/berti-group-acquisisce-il-100-di-vicentini-carni-e-punta-a-500-milioni-di-euro-di-ricavi/" target="_blank" rel="noopener">BeBeez ↗</a> <a href="https://www.alimentando.info/gruppo-berti-acquisisce-vicentini-carni-fatturato-aggregato-previsto-a-500-milioni-di-euro/" target="_blank" rel="noopener">Alimentando ↗</a></div></article><article class="deal"><div class="poster" role="img" aria-label="All&#x27;estero non si va una volta sola."><div class="pin"><div class="p-rule"></div><div class="p-label">M&amp;A · STRATEGIA</div><div class="p-title">All&#x27;estero<br>non si va<br><em>una volta sola.</em></div><div class="p-sub">Grafica Veneta compra le attività inglesi di CPI: la terza acquisizione oltre confine in cinque anni.</div><div class="p-low"><svg class="p-svg" viewBox="0 0 460 80" aria-hidden="true"><path d="M10 64 Q230 -18 450 64" fill="none" stroke="#E9B44C" stroke-width="2.4" stroke-dasharray="7 7"/><circle cx="10" cy="64" r="7" fill="#E9B44C"/><circle cx="450" cy="64" r="7" fill="#E9B44C"/></svg><div class="p-ends"><div><b>ITALIA · GRAFICA VENETA</b><strong>~170 mln € di ricavi 2025</strong></div><div><b>REGNO UNITO · CPI BOOKS</b><strong>~150 mln € · 7 stabilimenti</strong></div></div><div class="p-pills"><span>Internazionalizzazione</span><span>Produzione locale</span><span>Buy-and-build</span></div><div class="p-foot"><span><b>Sante Maiolica</b> · M&amp;A Insight</span><span>Fonte: MF Milano Finanza, VenetoEconomia</span></div></div></div></div><div class="meta"><span class="k">Internazionalizzazione</span><span>Post del 15 ottobre</span></div><h3>Grafica Veneta → CPI Books e CPI Antony Rowe</h3><p>Terza acquisizione estera in cinque anni, con una logica costante: produrre nel mercato dove il libro si vende, comprando chi è già radicato lì. L&#x27;internazionalizzazione smette di essere una scommessa isolata e diventa una competenza che si ripete. Con questo passo l&#x27;80% dei ricavi del gruppo arriva dall&#x27;estero.</p><div class="links"><a href="https://www.milanofinanza.it/news/grafica-veneta-compra-in-uk-due-tipografie-con-150-milioni-di-giro-d-affari-202610132132356676" target="_blank" rel="noopener">MF Milano Finanza ↗</a> <a href="https://www.venetoeconomia.it/2026/10/grafica-veneta-sbarca-nel-regno-unito-gv-group-rileva-cpi-books-e-cpi-antony-rowe-e-raddoppia/" target="_blank" rel="noopener">VenetoEconomia ↗</a></div></article><article class="deal"><div class="poster" role="img" aria-label="Da soli piccoli, insieme un&#x27;industria."><div class="pin"><div class="p-rule"></div><div class="p-label">M&amp;A · STRATEGIA</div><div class="p-title">Da soli piccoli,<br>insieme<br><em>un&#x27;industria.</em></div><div class="p-sub">Gruppo Everest arriva a dieci aziende di impiantistica in meno di un anno. I fondatori restano alla guida e diventano soci del gruppo.</div><div class="p-low"><svg class="p-svg" viewBox="0 0 460 80" aria-hidden="true"><path d="M10 12 L300 40 M10 40 L300 40 M10 68 L300 40" fill="none" stroke="#E9B44C" stroke-width="2.4"/><path d="M300 40 L450 40" fill="none" stroke="#E9B44C" stroke-width="2.4" stroke-dasharray="7 7"/><circle cx="10" cy="12" r="5" fill="#E9B44C"/><circle cx="10" cy="40" r="5" fill="#E9B44C"/><circle cx="10" cy="68" r="5" fill="#E9B44C"/><circle cx="450" cy="40" r="8" fill="#E9B44C"/></svg><div class="p-ends"><div><b>NOVEMBRE 2025 · NASCE EVEREST</b><strong>5 società</strong></div><div><b>OTTOBRE 2026 · GRUPPO EVEREST</b><strong>10 società · ~500 addetti</strong></div></div><div class="p-pills"><span>Buy-and-build</span><span>Fondatori soci</span><span>Impianti e fotovoltaico</span></div><div class="p-foot"><span><b>Sante Maiolica</b> · M&amp;A Insight</span><span>Fonte: Financecommunity, MF Milano Finanza</span></div></div></div></div><div class="meta"><span class="k">Consolidamento</span><span>Post del 14 ottobre</span></div><h3>Gruppo Everest (Vam Investments) → Ciemme Impianti, Corna Impianti, Project Group</h3><p>Dieci imprese di impiantistica in meno di un anno, ciascuna troppo piccola per servire da sola un grande cliente industriale. Insieme offrono impianti elettrici, meccanici e fotovoltaico con un unico interlocutore. I fondatori restano alla guida come soci: vendono e continuano a lavorare su un progetto più grande, condividendone il risultato.</p><div class="links"><a href="https://financecommunity.it/gli-advisor-del-gruppo-everest-nelle-acquisizioni-di-ciemme-impianti-corna-impianti-e-project-group/" target="_blank" rel="noopener">Financecommunity ↗</a> <a href="https://www.milanofinanza.it/news/transizione-vam-crea-il-polo-everest-2684250" target="_blank" rel="noopener">MF Milano Finanza ↗</a></div></article><article class="deal"><div class="poster" role="img" aria-label="Cambiare cosa vendi, non solo dove."><div class="pin"><div class="p-rule"></div><div class="p-label">M&amp;A · STRATEGIA</div><div class="p-title">Cambiare<br>cosa vendi,<br><em>non solo dove.</em></div><div class="p-sub">Maccaferri (Ambienta) compra Iterchimica e Surface Tech e crea una divisione di materiali ad alte prestazioni. I fondatori reinvestono e restano alla guida.</div><div class="p-low"><svg class="p-svg" viewBox="0 0 460 80" aria-hidden="true"><path d="M10 40 L220 40 C300 40 330 12 450 12 M220 40 C300 40 330 68 450 68" fill="none" stroke="#E9B44C" stroke-width="2.4" stroke-dasharray="7 7"/><circle cx="10" cy="40" r="7" fill="#E9B44C"/><circle cx="450" cy="12" r="6" fill="#E9B44C"/><circle cx="450" cy="68" r="6" fill="#E9B44C"/></svg><div class="p-ends"><div><b>ITALIA · ITERCHIMICA</b><strong>Bergamo · dal 1967</strong></div><div><b>USA · SURFACE TECH</b><strong>San Diego · dal 2013</strong></div></div><div class="p-pills"><span>Riposizionamento tecnologico</span><span>Internazionalizzazione</span><span>Fondatori che reinvestono</span></div><div class="p-foot"><span><b>Sante Maiolica</b> · M&amp;A Insight</span><span>Fonte: Teleborsa, Il Sole 24 Ore</span></div></div></div></div><div class="meta"><span class="k">Riposizionamento tecnologico</span><span>Post del 13 ottobre</span></div><h3>Officine Maccaferri (Ambienta) → Iterchimica e Surface Tech</h3><p>L&#x27;acquisizione serve a cambiare cosa si vende, oltre che dove. Maccaferri compra due tecnologie per strade più durature, una per l&#x27;Europa e una per il Nord America, risparmiando anni di sviluppo interno. Il reinvestimento dei fondatori tiene in azienda il know-how appena acquistato, che è la parte più facile da perdere.</p><div class="links"><a href="https://www.teleborsa.it/News/2026/10/06/ambienta-sgr-maccaferri-acquisisce-iterchimica-e-surface-tech-53.html" target="_blank" rel="noopener">Teleborsa ↗</a> <a href="https://en.ilsole24ore.com/art/maccaferri-ambienta-acquires-iterchimica-and-surface-tech-AJIBhHbB" target="_blank" rel="noopener">Il Sole 24 Ore ↗</a></div></article><article class="deal"><div class="poster" role="img" aria-label="Tre soci, un fondatore, sempre a bordo."><div class="pin"><div class="p-rule"></div><div class="p-label">M&amp;A · STRATEGIA</div><div class="p-title">Tre soci,<br>un fondatore,<br><em>sempre a bordo.</em></div><div class="p-sub">Trime passa a Platinum Equity dopo Wise Equity e 21 Invest. Il fondatore reinveste anche questa volta: ogni socio per una fase di crescita.</div><div class="p-low"><svg class="p-svg" viewBox="0 0 460 80" aria-hidden="true"><path d="M10 40 L450 40" fill="none" stroke="#E9B44C" stroke-width="2.4" stroke-dasharray="7 7"/><circle cx="10" cy="40" r="7" fill="#E9B44C"/><circle cx="450" cy="40" r="7" fill="#E9B44C"/></svg><div class="p-ends"><div><b>2021 · TRIME</b><strong>80 mln € di ricavi</strong></div><div><b>2026 · ATTESI</b><strong>oltre 150 mln € · 90%+ estero</strong></div></div><div class="p-pills"><span>Private equity</span><span>Internazionalizzazione</span><span>Continuità del fondatore</span></div><div class="p-foot"><span><b>Sante Maiolica</b> · M&amp;A Insight</span><span>Fonte: Platinum Equity, Financecommunity</span></div></div></div></div><div class="meta"><span class="k">Capitale e fondatori</span><span>Post del 21 ottobre</span></div><h3>Platinum Equity → Trime</h3><p>Terzo fondo in sette anni, e ogni volta il fondatore reinveste. Ciascun socio è stato scelto per una fase precisa: oggi serve chi conosce il noleggio americano, dove le vendite sono passate da 9 a circa 34 milioni. Aprire il capitale, in questo caso, è lo strumento per restare alla guida.</p><div class="links"><a href="https://www.platinumequity.com/news/platinum-equity-to-acquire-trime-in-partnership-with-founder-and-management/" target="_blank" rel="noopener">Comunicato Platinum ↗</a> <a href="https://financecommunity.it/gli-advisor-dietro-la-acquisizione-di-trime/" target="_blank" rel="noopener">Financecommunity ↗</a></div></article></div>
+  </section>
+
+  <section class="method col">
+    <h2>Come leggiamo i dati</h2>
+    <p>L'universo sono le operazioni annunciate dall'1 al 30 ottobre 2026 e registrate dal M&amp;A Monitor Italia da fonti pubbliche: comunicati, stampa economica e finanziaria. Sono esclusi i 13 rumor non confermati. Le tre offerte concorrenti per The Italian Sea Group contano come un'operazione sola.</p>
+    <p>Ogni operazione è classificata su tre livelli: la natura (strategica, add-on, buyout finanziario, capitale per la crescita, riassetto, asset deal), la leva strategica (principale ed eventualmente secondaria) e il motivo della vendita. Le percentuali sulle leve sono calcolate sulle 96 operazioni strategiche e add-on. La classificazione si basa su quanto dichiarato dalle parti e dalle fonti.</p>
+    <p>Il valore economico è comunicato in pochissimi casi. Per questo contiamo le operazioni e non ne sommiamo il valore. I dati non sono esaustivi e non contengono giudizi sul prezzo né indicazioni di investimento.</p>
+  </section>
+</div>
+
+</body>
+</html>
