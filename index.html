@@ -2,84 +2,72 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Il mese in M&amp;A · Archivio</title>
-<meta name="description" content="Ottobre 2026 in 132 operazioni M&amp;A: natura, acquirenti, leve strategiche e motivi della vendita, con i deal del mese. A cura di Sante Maiolica.">
-</head>
-<body style="margin:0">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Un'operazione M&amp;A al giorno, letta per la sua logica strategica. Il portfolio dei post di Sante Maiolica.">
+<meta property="og:title" content="M&amp;A Insight di Sante Maiolica">
+<meta property="og:description" content="Un'operazione al giorno, letta per la sua strategia.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://santemaiolica.it/">
+<meta property="og:image" content="https://santemaiolica.it/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="M&amp;A Insight di Sante Maiolica: un'operazione al giorno, letta per la sua strategia.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://santemaiolica.it/">
+<meta name="author" content="Sante Maiolica">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>M&amp;A Insight di Sante Maiolica</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,600;1,8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: one reading column for the letter and the analysis; charts as labelled bar lists; the month's deals as the same 4:5 posters used on LinkedIn. */
+/* Layout: a gallery of the daily LinkedIn graphics, each followed by its strategic reading; header + filter row by strategic lever. */
 :root{
-  --bg:#ECEEF2; --paper:#FFFFFF; --fg:#152033; --muted:#5B6474; --rule:#D5D9E1;
-  --accent:#9A6B12; --bar:#13213A; --track:#E3E6EC; --note:#FBF4E4;
+  --bg:#ECEEF2; --surface:#FFFFFF; --fg:#152033; --muted:#5B6474; --rule:#D5D9E1;
+  --accent:#9A6B12; --chip:#FFFFFF; --chip-on:#13213A; --chip-on-fg:#F4EFE6;
+  /* poster (the LinkedIn image) keeps its own fixed palette in both themes */
   --p-bg:#13213A; --p-gold:#E9B44C; --p-ivory:#F4EFE6; --p-grey:#8F99AD; --p-sand:#C9C3B8; --p-rule:#2F3B52;
   --serif:"Source Serif 4","Charter","Bitstream Charter",Georgia,serif;
   --sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0B1220; --paper:#121B2C; --fg:#ECE7DD; --muted:#9BA4B6; --rule:#263248;
-  --accent:#E9B44C; --bar:#E9B44C; --track:#1C2638; --note:#1A2333; color-scheme:dark}}
+  --bg:#0B1220; --surface:#121B2C; --fg:#ECE7DD; --muted:#9BA4B6; --rule:#263248;
+  --accent:#E9B44C; --chip:#121B2C; --chip-on:#E9B44C; --chip-on-fg:#13213A; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0B1220; --paper:#121B2C; --fg:#ECE7DD; --muted:#9BA4B6; --rule:#263248;
-  --accent:#E9B44C; --bar:#E9B44C; --track:#1C2638; --note:#1A2333; color-scheme:dark}
+  --bg:#0B1220; --surface:#121B2C; --fg:#ECE7DD; --muted:#9BA4B6; --rule:#263248;
+  --accent:#E9B44C; --chip:#121B2C; --chip-on:#E9B44C; --chip-on-fg:#13213A; color-scheme:dark}
+
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
-.wrap{max-width:1120px;margin:0 auto}
-.col{max-width:720px}
-a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.pilot{margin-top:20px;background:var(--note);border:1px solid var(--rule);border-radius:6px;padding:10px 14px;font-size:13.5px;color:var(--muted)}
-header.mast{padding-block:36px 26px;border-bottom:1px solid var(--rule);display:grid;gap:10px}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+.wrap{max-width:1180px;margin:0 auto}
+header{padding-block:44px 22px;display:grid;gap:10px;border-bottom:1px solid var(--rule)}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,72px);line-height:1;margin:0;letter-spacing:-.015em}
-h1 em{color:var(--accent);font-style:italic;font-weight:600}
-.dek{font-family:var(--serif);font-size:clamp(19px,2.4vw,23px);line-height:1.35;margin:4px 0 0;max-width:34ch;text-wrap:balance}
-section{padding-block:40px;border-bottom:1px solid var(--rule);display:grid;gap:18px}
-h2{font-family:var(--serif);font-weight:700;font-size:clamp(25px,3.4vw,32px);line-height:1.15;margin:0;text-wrap:balance}
-.kick{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-p{margin:0}
-.prose{display:grid;gap:14px}
-.letter{font-family:var(--serif);font-size:19px;line-height:1.6}
-.sig{font-family:var(--serif);font-style:italic;color:var(--muted)}
-.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-@media (max-width:640px){.nums{grid-template-columns:1fr}}
-.num{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:18px;display:grid;gap:6px;align-content:start}
-.num b{font-family:var(--serif);font-size:48px;line-height:1;font-weight:700;font-variant-numeric:tabular-nums}
-.num span{font-size:14px;color:var(--muted);line-height:1.4}
-.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
-@media (max-width:820px){.two{grid-template-columns:1fr}}
-.chart{margin:0;background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:18px 18px 14px;display:grid;gap:12px;min-width:0}
-.chart figcaption{font-size:13px;font-weight:600;color:var(--muted)}
-.bars{list-style:none;margin:0;padding:0;display:grid;gap:9px}
-.bars li{display:grid;grid-template-columns:minmax(0,11.5em) minmax(0,1fr) 5.2em;gap:10px;align-items:center;font-size:14px}
-@media (max-width:480px){.bars li{grid-template-columns:minmax(0,1fr) 4.8em}.bars .bt{grid-column:1/-1;grid-row:2}}
-.bl{line-height:1.25}
-.bt{height:12px;background:var(--track);border-radius:3px;overflow:hidden}
-.bf{display:block;height:100%;background:var(--bar);border-radius:0 3px 3px 0}
-.bv{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-.bv small{color:var(--muted);font-size:12.5px}
-.cnote{font-size:12.5px;color:var(--muted);margin:0}
-.levers{display:grid;gap:10px;margin:0;padding:0;list-style:none}
-.levers li{display:grid;grid-template-columns:12em minmax(0,1fr);gap:12px;padding-block:10px;border-top:1px solid var(--rule);font-size:15px}
-@media (max-width:560px){.levers li{grid-template-columns:1fr;gap:2px}}
-.levers b{font-weight:600}
-.deals{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:32px 24px}
-.deal{display:grid;gap:10px;align-content:start;min-width:0}
-.deal h3{font-family:var(--serif);font-size:19px;line-height:1.25;margin:0;font-weight:600;text-wrap:balance}
-.deal p{font-size:14.5px}
-.meta{display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
-.meta .k{color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:11.5px}
-.links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,5.4vw,56px);line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1 em{color:var(--accent)}
+.lede{max-width:62ch;color:var(--muted);margin:4px 0 0;font-size:16px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding-block:18px}
+.bar .count{margin-left:auto;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.chip{font:500 13px/1 var(--sans);padding:9px 14px;border-radius:999px;border:1px solid var(--rule);background:var(--chip);color:var(--fg);cursor:pointer}
+.chip span{color:var(--muted);margin-left:6px;font-variant-numeric:tabular-nums}
+.chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-fg);border-color:var(--chip-on)}
+.chip[aria-pressed="true"] span{color:inherit;opacity:.75}
+.chip:focus-visible,summary:focus-visible,.copy:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.grid{display:grid;grid-template-columns:1fr;gap:36px 28px;margin-top:6px}
+@media (min-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1120px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+article{display:grid;gap:14px;align-content:start;min-width:0}
+
+/* ---- the poster: replica of the 1080×1350 LinkedIn graphic, scaled with container units ---- */
 .poster{container-type:inline-size;width:100%;max-width:100%;aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative;
-  background:radial-gradient(70% 55% at 100% 0%,rgba(233,180,76,.16),rgba(233,180,76,0) 70%),var(--p-bg);color:var(--p-ivory)}
+  background:radial-gradient(70% 55% at 100% 0%,rgba(233,180,76,.16),rgba(233,180,76,0) 70%),var(--p-bg);color:var(--p-ivory);
+  box-shadow:0 1px 2px rgba(10,16,30,.12),0 12px 28px -14px rgba(10,16,30,.45)}
 .pin{position:absolute;inset:0;padding:7.4cqw 7.4cqw 6cqw;display:flex;flex-direction:column}
 .p-rule{width:24cqw;border-top:.38cqw solid var(--p-gold)}
 .p-label{font:600 2.3cqw/1 var(--sans);letter-spacing:.38cqw;color:var(--p-gold);margin-top:1.9cqw}
-.p-title{font-family:var(--serif);font-weight:700;font-size:9.6cqw;line-height:1.08;margin-top:5.6cqw}
+.p-title{font-family:var(--serif);font-weight:700;font-size:9.6cqw;line-height:1.08;margin-top:5.6cqw;letter-spacing:-.02cqw}
 .p-title em{color:var(--p-gold);font-style:italic}
 .p-sub{font-size:2.85cqw;line-height:1.45;color:var(--p-sand);margin-top:3.8cqw;max-width:92%}
 .p-low{margin-top:auto;display:grid;gap:2.6cqw}
@@ -92,26 +80,735 @@ p{margin:0}
 .p-pills span{font-size:2.2cqw;border:.19cqw solid rgba(244,239,230,.38);border-radius:5cqw;padding:.9cqw 2.2cqw}
 .p-foot{display:flex;justify-content:space-between;gap:3cqw;border-top:.19cqw solid var(--p-rule);padding-top:2.4cqw;font-size:2cqw;color:var(--p-grey)}
 .p-foot b{color:var(--p-ivory)}
-.method{font-size:14px;color:var(--muted);display:grid;gap:10px;border-bottom:0}
-.method h2{font-size:20px;color:var(--fg)}
-.top{display:flex;gap:10px;font-size:13px;padding-top:22px;color:var(--muted)}.top a{color:var(--accent);text-decoration:none}.top a:hover{text-decoration:underline}
-.issues{display:grid;gap:16px;padding-block:32px}.issue{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:22px;display:grid;gap:10px;text-decoration:none;color:var(--fg);max-width:760px}.issue:hover{border-color:var(--accent)}.issue h2{font-size:26px}.issue .go{color:var(--accent);font-weight:600;font-size:14px}.facts{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--muted)}.facts b{color:var(--fg);font-variant-numeric:tabular-nums}</style>
+.p-foot span:last-child{text-align:right}
+
+/* ---- reading below the poster ---- */
+.meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-size:12.5px;color:var(--muted)}
+.meta time{font-weight:600;color:var(--fg);font-variant-numeric:tabular-nums}
+.meta .k{color:var(--accent);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:11.5px}
+h2{font-family:var(--serif);font-size:20px;line-height:1.25;margin:0;font-weight:600;text-wrap:balance}
+.route{font-size:13px;color:var(--muted);margin-top:-8px}
+.sintesi{margin:0;font-size:15px}
+.sintesi::before{content:"Valenza strategica";display:block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}
+.links a{color:var(--accent);text-underline-offset:3px}
+details{border-top:1px solid var(--rule);padding-top:10px}
+summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--fg);list-style:none;display:flex;align-items:center;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";font-family:var(--serif);font-size:18px;line-height:1;color:var(--accent);width:12px}
+details[open] summary::before{content:"–"}
+.post{white-space:pre-wrap;font-size:14px;line-height:1.6;margin:10px 0 8px;padding-left:14px;border-left:2px solid var(--accent);color:var(--fg)}
+.copy{font:500 12.5px var(--sans);background:transparent;border:1px solid var(--rule);color:var(--fg);border-radius:6px;padding:7px 12px;cursor:pointer}
+.empty{color:var(--muted);padding:40px 0}
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted);max-width:80ch}
+@media (prefers-reduced-motion:no-preference){article{animation:rise .5s ease both}@keyframes rise{from{transform:translateY(8px)}to{transform:none}}}
+</style>
+</head>
+<body>
 <div class="wrap">
-  <nav class="top"><a href="../">Portfolio</a></nav>
-  <header class="mast">
+  <header>
     <div class="eyebrow">Sante Maiolica · M&amp;A Insight</div>
-    <h1>Il mese <em>in M&amp;A</em></h1>
-    <p class="dek">Ogni mese tutte le operazioni del mercato italiano, lette per la strategia che le muove.</p>
-  <p class="lede"><a href="newsletter/">Leggi la newsletter mensile, Il mese in M&amp;A →</a></p>
+    <h1>Un'operazione al giorno, <em>letta per la sua strategia.</em></h1>
+    <p class="lede">Ogni mattina un deal del mercato italiano, scelto per la logica che lo muove: crescere all'estero, aggregare, controllare la filiera, cambiare tecnologia. Sotto ogni immagine, cosa c'è davvero in gioco.</p>
+  <p class="lede"><a href="newsletter.html">Leggi la newsletter mensile, Il mese in M&amp;A →</a></p>
   </header>
-  <main class="issues">
-    <a class="issue" href="2026-10.html">
-      <div class="kick">Numero 1 · Ottobre 2026</div>
-      <h2>Si compra per crescere nel proprio mestiere, e chi vende spesso resta a bordo</h2>
-      <div class="facts"><span><b>132</b> operazioni</span><span><b>73%</b> con logica strategica</span><span><b>36</b> venditori che restano</span></div>
-      <span class="go">Leggi il numero →</span>
-    </a>
-  </main>
+  <div class="bar" id="bar" role="toolbar" aria-label="Filtra per chiave strategica"></div>
+  <main class="grid" id="grid"><p class="empty">Caricamento dei post…</p></main>
+  <footer>Commenti su operazioni comunicate da fonti pubbliche, citate in ogni scheda. Nessun giudizio sul prezzo né indicazione di investimento.</footer>
 </div>
+
+<script type="application/json" id="posts">[
+ {
+  "date": "2026-11-02",
+  "deal": "Contship (Sogemar) → Gruppo Tarros",
+  "route": "Germania/Italia → Italia · logistica e porti",
+  "chiave": "Integrazione di filiera",
+  "lines": [
+   "Chi ha il cliente",
+   "decide dove",
+   "arriva la merce."
+  ],
+  "subtitle": "Contship firma per il Gruppo Tarros di La Spezia: terminal, treno e trasporto marittimo in un'unica piattaforma tra Europa, Mediterraneo e Nord Africa.",
+  "left": {
+   "label": "LA SPEZIA · GRUPPO TARROS",
+   "value": "751 persone · dal 1828"
+  },
+  "right": {
+   "label": "CONTSHIP · GRUPPO EUROKAI",
+   "value": "terminal in Italia, Egitto, Marocco"
+  },
+  "levers": [
+   "Integrazione di filiera",
+   "Cliente diretto",
+   "Corridoio euro-mediterraneo"
+  ],
+  "source": "Contship, Eurokai, Il Sole 24 Ore",
+  "sintesi": "Contship, che gestisce terminal e trasporto intermodale, compra il Gruppo Tarros con la sua rete marittima e 2.700 clienti in 16 Paesi. L'obiettivo dichiarato è una piattaforma unica tra nave, treno e camion sul corridoio Europa-Mediterraneo-Nord Africa. Chi controlla il rapporto diretto con chi spedisce può orientare i flussi verso le proprie infrastrutture, invece di aspettarli.",
+  "links": [
+   {
+    "label": "Comunicato Contship",
+    "url": "https://www.hellenicshippingnews.com/contship-and-tarros-agreement-signed-for-the-acquisition-of-the-tarros-group/"
+   },
+   {
+    "label": "Il Sole 24 Ore",
+    "url": "https://en.ilsole24ore.com/art/contship-has-signed-an-agreement-to-acquire-the-tarros-group-AJE0S0wB"
+   }
+  ],
+  "post": "Chi gestisce un terminal aspetta la merce. Chi ha il rapporto con i clienti decide dove farla arrivare.\n\nContship, il gruppo della logistica intermodale controllato dalla tedesca Eurokai, ha firmato per comprare il Gruppo Tarros di La Spezia: nato nel 1828, 751 persone, 2.700 clienti, 31 porti in 16 Paesi. Il closing è atteso entro fine anno, dopo le autorizzazioni.\n\nPer me la logica sta nella filiera. Contship ha terminal e collegamenti ferroviari; Tarros porta trasporto marittimo e il rapporto diretto con chi spedisce. Insieme, nave, treno e camion diventano un unico servizio tra Europa, Mediterraneo e Nord Africa.\n\nNella logistica il valore va sempre più a chi segue la merce dall'inizio alla fine del viaggio.\n\nNella vostra filiera, chi ha davvero in mano il cliente finale?\n\n#MergersAndAcquisitions #StrategiaAziendale #Logistica #Porti"
+ },
+ {
+  "date": "2026-10-30",
+  "deal": "Gruppo Transpack → Gruppo Atlante",
+  "route": "Italia · logistica e imballaggi industriali",
+  "chiave": "Consolidamento",
+  "lines": [
+   "Nella crisi",
+   "compra chi",
+   "è già dentro."
+  ],
+  "subtitle": "Transpack prima gestisce in affitto le aziende del Gruppo Atlante, in concordato, poi le compra in blocco. Salvi tutti i 150 posti di lavoro.",
+  "left": {
+   "label": "PADOVA · GRUPPO TRANSPACK",
+   "value": "600+ collaboratori · dal 1973"
+  },
+  "right": {
+   "label": "GRUPPO ATLANTE · 3 SOCIETÀ",
+   "value": "150 posti di lavoro salvi"
+  },
+  "levers": [
+   "Consolidamento",
+   "Crisi d'impresa",
+   "Prima l'affitto, poi l'acquisto"
+  ],
+  "source": "Supply Chain Italy, Tech4Trade",
+  "sintesi": "Il Gruppo Transpack ha prima gestito in affitto le tre aziende del Gruppo Atlante, in concordato preventivo, e poi le ha acquistate in blocco dopo un invito a manifestare interesse andato deserto. Il periodo di affitto ha permesso di conoscere clienti, persone e impianti prima di comprare. Nel consolidamento di un settore, le crisi d'impresa diventano un canale di crescita che salvaguarda anche l'occupazione.",
+  "links": [
+   {
+    "label": "Supply Chain Italy",
+    "url": "https://www.supplychainitaly.it/2026/10/27/passano-a-transpack-le-tre-aziende-di-imballaggi-e-logistica-di-gruppo-atlante"
+   },
+   {
+    "label": "Tech4Trade",
+    "url": "https://www.tech4trade.it/il-gruppo-transpack-acquisisce-le-attivita-del-gruppo-atlante/"
+   }
+  ],
+  "post": "Il momento migliore per conoscere un'azienda è prima di comprarla. Meglio ancora se ci lavori dentro.\n\nIl Gruppo Transpack, imballaggi industriali e logistica da Padova, ha rilevato le attività del Gruppo Atlante, in concordato preventivo al Tribunale di Milano. Tre società passate di mano il 13 ottobre, tutti i 150 dipendenti salvaguardati.\n\nÈ il percorso che mi interessa. Da fine 2025 Transpack gestiva già queste aziende in affitto, con una sua società. Poi ha offerto di comprarle in blocco, e l'invito del tribunale a farsi avanti è andato deserto.\n\nNelle crisi d'impresa spesso compra chi conosce già clienti, persone e impianti. Per chi vuole crescere nel proprio settore è un canale da tenere d'occhio.\n\nVoi un'azienda in concordato la guardereste come un rischio o come un'occasione?\n\n#MergersAndAcquisitions #StrategiaAziendale #Logistica #CrisiDImpresa"
+ },
+ {
+  "date": "2026-10-29",
+  "deal": "SOL (Vivisol) → Wentimed",
+  "route": "Italia → Polonia · home care sanitaria",
+  "chiave": "Internazionalizzazione",
+  "lines": [
+   "All'estero",
+   "conta di più",
+   "il secondo passo."
+  ],
+  "subtitle": "SOL compra Wentimed e rafforza la sua presenza nell'home care in Polonia, dove opera dal 2018. Il fondatore resta per la transizione.",
+  "left": {
+   "label": "ITALIA · GRUPPO SOL",
+   "value": "8° gruppo al mondo nei gas"
+  },
+  "right": {
+   "label": "POLONIA · WENTIMED",
+   "value": ">9 mln € · dal 2014"
+  },
+  "levers": [
+   "Internazionalizzazione",
+   "Competenze locali",
+   "Fondatore che resta"
+  ],
+  "source": "SOL Group (28/10/2026), MF Milano Finanza",
+  "sintesi": "SOL è in Polonia dal 2018 e con Wentimed compie il secondo passo nello stesso mercato. Aggiunge uno specialista locale di ventilazione meccanica a domicilio e cure palliative alle società già presenti, puntando sulle sinergie operative. Il fondatore resta nella fase di transizione, così competenze e rapporti con il territorio passano al gruppo senza strappi.",
+  "links": [
+   {
+    "label": "Comunicato SOL Group",
+    "url": "https://www.solgroup.com/en/sol-group-continues-its-strategic-investment-path-in-the-home-care-sector-where-it-operates-through-its-vivisol-companies-strengthening-its-presence-in-poland"
+   },
+   {
+    "label": "MF Milano Finanza",
+    "url": "https://www.milanofinanza.it/news/sol-nuova-acquisizione-in-polonia-rilevato-il-100-di-wentimed-202610281106482848"
+   }
+  ],
+  "post": "Entrare in un mercato estero è la parte facile. Il difficile è crescerci dopo.\n\nSOL, il gruppo italiano dei gas tecnici e medicinali, tramite Vivisol ha comprato il 100% di Wentimed: home care in Polonia, fondata nel 2014 dal medico Piotr Compała, oltre 9 milioni di euro di ricavi nel 2025.\n\nIn Polonia SOL c'è dal 2018. Questa operazione è il secondo passo, e mi piace come è fatto: si compra una realtà locale specializzata in ventilazione meccanica a domicilio e cure palliative, la si affianca alle società già presenti, e il fondatore resta nella fase di transizione.\n\nTante imprese italiane si fermano alla prima acquisizione all'estero. Il valore arriva quando torni nello stesso Paese con un'operazione che completa la prima.\n\nChi di voi ha già fatto il primo passo fuori dall'Italia: qual è stato il secondo?\n\n#MergersAndAcquisitions #StrategiaAziendale #Internazionalizzazione #Healthcare"
+ },
+ {
+  "date": "2026-10-28",
+  "deal": "Haidlmair → Euro Stampi",
+  "route": "Austria → Italia · meccanica",
+  "chiave": "Internazionalizzazione",
+  "lines": [
+   "Vendere",
+   "a chi fa",
+   "il tuo mestiere."
+  ],
+  "subtitle": "Haidlmair rileva il 75% di Euro Stampi. Le cinque famiglie fondatrici tengono il 5% ciascuna; marchio e organizzazione restano indipendenti.",
+  "left": {
+   "label": "AUSTRIA · HAIDLMAIR",
+   "value": "12 società · 130+ mln € post-deal"
+  },
+  "right": {
+   "label": "ITALIA · EURO STAMPI",
+   "value": "~20 mln € · dal 1982"
+  },
+  "levers": [
+   "Partner industriale",
+   "Ingresso dall'estero",
+   "Famiglie che restano"
+  ],
+  "source": "Industrial Production, Financecommunity",
+  "sintesi": "Un gruppo industriale austriaco dello stesso mestiere entra nel capitale di uno specialista marchigiano degli stampi, con clienti in oltre 40 Paesi. Il partner conosce già clienti, tecnologie e tempi della commessa e può portare investimenti e mercati. Le cinque famiglie fondatrici restano con il 5% ciascuna e il marchio resta indipendente, una soluzione che tiene insieme continuità e crescita.",
+  "links": [
+   {
+    "label": "Industrial Production",
+    "url": "https://www.industrial-production.de/wirtschaft---unternehmen/news-von-der-fakuma-2026-haidlmair-uebernimmt-mehrheit-an-euro-stampi-722695.htm"
+   },
+   {
+    "label": "Financecommunity",
+    "url": "https://financecommunity.it/haidlmair-acquisisce-euro-stampi-tutti-gli-advisor/"
+   }
+  ],
+  "post": "Cinque famiglie, un'azienda di stampi a Jesi e una scelta: vendere a chi fa il loro stesso mestiere.\n\nIl gruppo austriaco Haidlmair ha rilevato il 75% di Euro Stampi: nata nel 1982, oltre 100 persone, circa 20 milioni di ricavi, clienti in più di 40 Paesi. Le famiglie fondatrici tengono il 5% ciascuna, e marchio e organizzazione restano indipendenti.\n\nQuello che guardo è il tipo di socio. Un industriale dello stesso settore conosce già clienti, macchine e tempi di una commessa. Può portare mercati e investimenti senza dover imparare il mestiere.\n\nE con cinque famiglie nel capitale, decidere il futuro insieme è spesso la parte più difficile. Qui restano tutte dentro, con una quota uguale.\n\nVoi, per la vostra azienda, cerchereste un socio finanziario o uno che fa il vostro stesso lavoro?\n\n#MergersAndAcquisitions #StrategiaAziendale #Industria #ImpreseFamiliari"
+ },
+ {
+  "date": "2026-10-27",
+  "deal": "Barilla → Goodles",
+  "route": "Italia → Stati Uniti · food",
+  "chiave": "Internazionalizzazione",
+  "lines": [
+   "Comprare",
+   "un marchio",
+   "e non toccarlo."
+  ],
+  "subtitle": "Barilla chiude l'acquisto di Goodles, mac & cheese californiano nato nel 2020: CEO, squadra e decisioni su ricette e marketing restano dove sono.",
+  "left": {
+   "label": "ITALIA · BARILLA",
+   "value": "4,83 mld € di ricavi 2025"
+  },
+  "right": {
+   "label": "USA · GOODLES",
+   "value": "dal 2020 · 73 persone"
+  },
+  "levers": [
+   "Internazionalizzazione",
+   "Nuova categoria",
+   "Autonomia del marchio"
+  ],
+  "source": "Teleborsa, Just Food, MF Milano Finanza",
+  "sintesi": "Barilla cresce negli Stati Uniti in una categoria nuova per il gruppo, comprando un marchio giovane già presente nella grande distribuzione americana. La scelta più rilevante riguarda il dopo: Goodles resta autonomo su prodotto, ricette, fornitori e marketing, con la stessa CEO e la stessa squadra. Il gruppo porta scala e accesso ai mercati esteri, il marchio conserva l'identità che ne ha costruito il valore.",
+  "links": [
+   {
+    "label": "Teleborsa",
+    "url": "https://www.teleborsa.it/News/2026/09/03/barilla-acquista-il-marchio-statunitense-di-mac-and-cheese-goodles-7.html"
+   },
+   {
+    "label": "Just Food",
+    "url": "https://www.just-food.com/news/barilla-snaps-up-goodles-mac-and-cheese-business/"
+   }
+  ],
+  "post": "Comprare un marchio e poi non toccarlo. In un'acquisizione è la disciplina più difficile.\n\nBarilla ha chiuso l'acquisto di Goodles, marchio californiano di mac & cheese nato nel 2020, con una squadra di 73 persone. La CEO resta, il team resta, e su ricette, fornitori e marketing Goodles continuerà a decidere da sola.\n\nLo vedo spesso quando un'impresa compra: sceglie un'azienda per la sua energia e il giorno dopo la riempie di procedure. Un marchio giovane vale per il rapporto con i suoi clienti e per chi l'ha costruito. Chi compra deve portare quello che manca, scala e mercati esteri, senza rompere quello che funziona.\n\nVoi, dopo un'acquisizione, cosa avete deciso di non cambiare?\n\n#MergersAndAcquisitions #StrategiaAziendale #Internazionalizzazione #FoodIndustry"
+ },
+ {
+  "date": "2026-10-26",
+  "deal": "Compendium → Studio Con.Tec.",
+  "route": "Italia · servizi professionali",
+  "chiave": "Consolidamento",
+  "lines": [
+   "Il cliente",
+   "resta locale,",
+   "la scala no."
+  ],
+  "subtitle": "Compendium rileva Studio Con.Tec. di Legnano: quarta acquisizione dell'anno in un piano da 30 milioni per aggregare studi professionali.",
+  "left": {
+   "label": "LEGNANO · STUDIO CON.TEC.",
+   "value": "4ª acquisizione del 2026"
+  },
+  "right": {
+   "label": "MILANO · COMPENDIUM",
+   "value": ">10 mln € pro-forma 2026"
+  },
+  "levers": [
+   "Buy-and-build",
+   "Studi professionali",
+   "Professionisti soci"
+  ],
+  "source": "Financecommunity",
+  "sintesi": "Gli studi di commercialisti e consulenti del lavoro sono tanti, piccoli e legati al territorio. Compendium li aggrega lasciando a ciascuno nome, persone e clienti, e mettendo in comune tecnologia e funzioni centrali, con la possibilità per i professionisti di entrare nel capitale. Per molti titolari è una via concreta alla continuità dello studio e agli investimenti che il mestiere ormai richiede.",
+  "links": [
+   {
+    "label": "Financecommunity",
+    "url": "https://financecommunity.it/gli-advisor-dietro-la-quarta-acquisizione-di-compendium/"
+   }
+  ],
+  "post": "Lo studio del commercialista sotto casa sta cambiando mestiere. A volte anche proprietario.\n\nCompendium, gruppo milanese di servizi alle imprese, ha rilevato il 100% di Studio Con.Tec. di Legnano. È la quarta acquisizione dell'anno, dentro un piano da 30 milioni per mettere insieme studi in Lombardia e Veneto.\n\nQuello che guardo è il modello. Lo studio tiene nome, persone e clienti; il gruppo porta tecnologia e funzioni comuni. E i professionisti possono entrare nel capitale.\n\nPer tanti titolari è una risposta a due domande insieme: chi porterà avanti lo studio dopo di me, e come reggo da solo gli investimenti che il mestiere ormai chiede.\n\nSe aveste uno studio, entrereste in un gruppo o restereste indipendenti?\n\n#MergersAndAcquisitions #StrategiaAziendale #ServiziProfessionali #BuyAndBuild"
+ },
+ {
+  "date": "2026-10-23",
+  "deal": "Excellera (ICG) → Fourtold",
+  "route": "Italia → Belgio · servizi professionali",
+  "chiave": "Internazionalizzazione",
+  "lines": [
+   "Chi vende",
+   "diventa socio",
+   "di chi compra."
+  ],
+  "subtitle": "Excellera porta a bordo Fourtold a Bruxelles. I fondatori reinvestiranno nel gruppo la maggior parte di quanto incassano.",
+  "left": {
+   "label": "ITALIA · EXCELLERA",
+   "value": "oltre 80 mln € di ricavi"
+  },
+  "right": {
+   "label": "BELGIO · FOURTOLD",
+   "value": "~30 professionisti · Bruxelles"
+  },
+  "levers": [
+   "Internazionalizzazione",
+   "Buy-and-build",
+   "Fondatori soci"
+  ],
+  "source": "BeBeez, Financecommunity, Affaritaliani",
+  "sintesi": "In una società di consulenza il valore sta nelle persone e nelle relazioni, che possono andarsene il giorno dopo il closing. Il reinvestimento dei fondatori li trasforma in soci del gruppo e lega il loro risultato a quello di chi compra. Così una piattaforma nata nel 2022 cresce all'estero senza disperdere ciò che acquista.",
+  "links": [
+   {
+    "label": "BeBeez",
+    "url": "https://bebeez.it/private-equity/excellera-icg-compra-anche-fourtold-e-rafforza-i-public-affairs-a-bruxelles-il-gruppo-supera-gli-80-mln-euro-di-ricavi/"
+   },
+   {
+    "label": "Financecommunity",
+    "url": "https://financecommunity.it/excellera-acquisisce-fourtold-tutti-gli-advisor/"
+   }
+  ],
+  "post": "Quando compri una società di consulenza, compri le persone. E le persone possono andarsene il giorno dopo il closing.\n\nExcellera, gruppo italiano di corporate affairs controllato da ICG, ha annunciato l'acquisizione di Fourtold: circa 30 professionisti di public affairs a Bruxelles. I fondatori reinvestiranno nel gruppo la maggior parte di quanto incassano.\n\nÈ il dettaglio che guardo. Chi vende non esce, diventa socio di chi compra. Il valore resta dov'è davvero, nelle relazioni e nelle teste di chi le ha costruite. E chi vende ha un motivo concreto per far crescere il gruppo, non solo la sua vecchia azienda.\n\nPer un gruppo nato nel 2022 e già oltre gli 80 milioni di ricavi, è anche il modo di crescere all'estero senza perdere pezzi per strada.\n\nAl posto dei fondatori, voi reinvestireste nel gruppo che vi compra?\n\n#MergersAndAcquisitions #StrategiaAziendale #ServiziProfessionali #PrivateEquity"
+ },
+ {
+  "date": "2026-10-22",
+  "deal": "Riello Investimenti → Italsur",
+  "route": "Italia · food",
+  "chiave": "Consolidamento",
+  "lines": [
+   "Una fabbrica",
+   "può diventare",
+   "un gruppo."
+  ],
+  "subtitle": "Riello Investimenti entra in Italsur, surgelati vegetali abruzzesi della famiglia Tullii, con un fondo nato per aggregare PMI.",
+  "left": {
+   "label": "ABRUZZO · ITALSUR",
+   "value": "oltre 23 mln € di ricavi · dal 1990"
+  },
+  "right": {
+   "label": "FONDO BUY&BUILD OPPORTUNITIES",
+   "value": "fino a 300 mln € · 3ª operazione"
+  },
+  "levers": [
+   "Buy-and-build",
+   "Seconda generazione",
+   "Food"
+  ],
+  "source": "Teleborsa, Financecommunity",
+  "sintesi": "Un fondo buy-and-build entra in un'impresa familiare di seconda generazione con un mandato dichiarato: aggregare. Italsur, sana ma ferma alla sua dimensione, può diventare il perno di un polo dei surgelati vegetali. Nel food italiano, molto frammentato, la scala decide il peso con la distribuzione e la capacità di investire.",
+  "links": [
+   {
+    "label": "Teleborsa",
+    "url": "https://www.teleborsa.it/DettaglioNews/45_2026-10-19_TLB/Riello-Investimenti-acquista-la-maggioranza-di-Italsur-con-fondo-BuyBuild-Opportunities.html"
+   },
+   {
+    "label": "Financecommunity",
+    "url": "https://financecommunity.it/riello-investimenti-sgr-al-controllo-di-italsur-ecco-gli-advisor/"
+   }
+  ],
+  "post": "Una sola fabbrica, la seconda generazione al comando e adesso un fondo nel capitale.\n\nRiello Investimenti ha rilevato la maggioranza di Italsur, surgelati vegetali di Notaresco, in provincia di Teramo. L'ha fondata Domenico Tullii nel 1990 e oggi la guidano i figli Carmine e Andrea: oltre 23 milioni di ricavi, soprattutto B2B e private label, più il marchio Campi Reali.\n\nA me interessa il dopo. Il fondo dice di voler affiancare il management e parla apertamente di aggregazioni nel settore. Italsur può diventare il centro di un gruppo più grande.\n\nNel food italiano ci sono tante aziende sane ferme a questa dimensione. Da sole crescono piano. Insieme contano di più con i clienti e hanno più spazio per investire.\n\nSe aveste un'azienda così, aprireste il capitale per guidare un'aggregazione o provereste a crescere da soli?\n\n#MergersAndAcquisitions #StrategiaAziendale #PrivateEquity #Food"
+ },
+ {
+  "date": "2026-10-21",
+  "deal": "Platinum Equity → Trime",
+  "route": "Stati Uniti → Italia · industria",
+  "chiave": "Capitale e fondatori",
+  "lines": [
+   "Tre soci,",
+   "un fondatore,",
+   "sempre a bordo."
+  ],
+  "subtitle": "Trime passa a Platinum Equity dopo Wise Equity e 21 Invest. Il fondatore reinveste anche questa volta: ogni socio per una fase di crescita.",
+  "left": {
+   "label": "2021 · TRIME",
+   "value": "80 mln € di ricavi"
+  },
+  "right": {
+   "label": "2026 · ATTESI",
+   "value": "oltre 150 mln € · 90%+ estero"
+  },
+  "levers": [
+   "Private equity",
+   "Internazionalizzazione",
+   "Continuità del fondatore"
+  ],
+  "source": "Platinum Equity, Financecommunity",
+  "sintesi": "Terzo fondo in sette anni, e ogni volta il fondatore reinveste. Ciascun socio è stato scelto per una fase precisa: oggi serve chi conosce il noleggio americano, dove le vendite sono passate da 9 a circa 34 milioni. Aprire il capitale, in questo caso, è lo strumento per restare alla guida.",
+  "links": [
+   {
+    "label": "Comunicato Platinum",
+    "url": "https://www.platinumequity.com/news/platinum-equity-to-acquire-trime-in-partnership-with-founder-and-management/"
+   },
+   {
+    "label": "Financecommunity",
+    "url": "https://financecommunity.it/gli-advisor-dietro-la-acquisizione-di-trime/"
+   }
+  ],
+  "post": "Tre fondi in sette anni, e il fondatore è ancora lì.\n\nTrime, torri faro e generatori mobili da Cassinetta di Lugagnano, passa a Platinum Equity. Prima c'erano stati Wise Equity e 21 Invest. Dal 2021 i ricavi sono passati da 80 a oltre 150 milioni attesi quest'anno, più del 90% all'estero. E Andrea Fontanella, con il management, reinveste anche questa volta.\n\nQuello che mi interessa è il metodo. Ogni socio è servito per una fase precisa. Oggi la crescita passa dagli Stati Uniti, dove le vendite sono salite da 9 a circa 34 milioni, e si sceglie un partner americano che il noleggio lo conosce bene.\n\nPer un imprenditore aprire il capitale può essere un modo per restare: basta scegliere ogni volta il socio giusto per il passo successivo.\n\nVoi il prossimo socio lo scegliereste per i soldi o per il mercato che vi apre?\n\n#MergersAndAcquisitions #StrategiaAziendale #PrivateEquity #Industria"
+ },
+ {
+  "date": "2026-10-20",
+  "deal": "HTI Group → Supersnow",
+  "route": "Italia → Polonia · impianti a fune",
+  "chiave": "Internazionalizzazione",
+  "lines": [
+   "Segui il cliente,",
+   "non solo",
+   "il prodotto."
+  ],
+  "subtitle": "HTI, il gruppo altoatesino degli impianti a fune, compra la polacca Supersnow: la seconda azienda dell'innevamento all'estero in poco più di un anno.",
+  "left": {
+   "label": "STATI UNITI · HKD · 2025",
+   "value": "~60 mln $ di ricavi"
+  },
+  "right": {
+   "label": "POLONIA · SUPERSNOW · 2026",
+   "value": "~25 mln € · 120+ addetti"
+  },
+  "levers": [
+   "Internazionalizzazione",
+   "Buy-and-build",
+   "Filiera del cliente"
+  ],
+  "source": "il Dolomiti; Snowsports News",
+  "sintesi": "HTI cresce seguendo il problema del suo cliente. Una stazione sciistica oggi dipende da innevamento, acqua ed energia, e chi le porta la funivia può portarle anche la neve. Seconda acquisizione nel settore in tredici mesi, sempre comprando specialisti già radicati nei mercati obiettivo: Nord America ed Est Europa.",
+  "links": [
+   {
+    "label": "il Dolomiti",
+    "url": "https://www.ildolomiti.it/economia/2026/dagli-impianti-di-risalita-ai-cannoni-sparaneve-hti-acquisisce-supersnow-e-punta-su-efficienza-energetica-e-risparmio-idrico"
+   }
+  ],
+  "post": "Meno neve naturale, più bisogno di neve programmata. Chi vende impianti di risalita lo sa bene.\n\nHTI, il gruppo di Vipiteno che controlla Leitner e Prinoth, è diventato socio unico della polacca Supersnow: cannoni e lance da neve, circa 25 milioni di ricavi, oltre 120 persone. Poco più di un anno fa aveva preso la maggioranza dell'americana HKD, che fa lo stesso mestiere.\n\nMi colpisce la logica. HTI non insegue un prodotto nuovo, segue il problema del suo cliente. Una stazione sciistica oggi vive di innevamento, acqua ed energia. Chi le porta la funivia può portarle anche la neve.\n\nE lo fa comprando specialisti già radicati nei mercati dove vuole crescere: Nord America ed Est Europa.\n\nNella vostra azienda, conoscete il prossimo problema del vostro cliente?\n\n#MergersAndAcquisitions #StrategiaAziendale #Internazionalizzazione #Industria"
+ },
+ {
+  "date": "2026-10-19",
+  "deal": "Gruppo Berti → Vicentini Carni",
+  "route": "Italia · agroalimentare",
+  "chiave": "Integrazione di filiera",
+  "lines": [
+   "La filiera",
+   "si compra",
+   "anello per anello."
+  ],
+  "subtitle": "Il Gruppo Berti, cereali e mangimi dal 1968, compra il macello Vicentini Carni e porta in casa l'ultimo passaggio della filiera bovina.",
+  "left": {
+   "label": "VERONA · GRUPPO BERTI",
+   "value": "~350 mln € di ricavi · dal 1968"
+  },
+  "right": {
+   "label": "SALIZZOLE · VICENTINI CARNI",
+   "value": "~48.000 bovini l'anno"
+  },
+  "levers": [
+   "Integrazione verticale",
+   "Controllo di filiera",
+   "Continuità d'impresa"
+  ],
+  "source": "BeBeez, Alimentando",
+  "sintesi": "Integrazione verticale completa, dal cereale al mangime fino al macello. Chi controlla la catena decide qualità, costi e tracciabilità invece di subirli, in un Paese che produce poco più di un terzo della carne bovina che consuma. L'operazione garantisce anche la continuità di un'impresa rimasta senza il suo titolare.",
+  "links": [
+   {
+    "label": "BeBeez",
+    "url": "https://bebeez.it/agroalimentare/berti-group-acquisisce-il-100-di-vicentini-carni-e-punta-a-500-milioni-di-euro-di-ricavi/"
+   },
+   {
+    "label": "Alimentando",
+    "url": "https://www.alimentando.info/gruppo-berti-acquisisce-vicentini-carni-fatturato-aggregato-previsto-a-500-milioni-di-euro/"
+   }
+  ],
+  "post": "Dal mangime al macello, sotto lo stesso tetto.\n\nIl Gruppo Berti di Verona, nato nel 1968 commerciando cereali, ha comprato il 100% di Vicentini Carni, il macello di Salizzole che lavora circa 48.000 bovini l'anno e ha 14 allevamenti di proprietà. Il titolare era scomparso ad agosto: l'attività continua dentro un gruppo del territorio.\n\nPer me conta la direzione. Berti produceva già cereali e mangimi, ora controlla anche l'ultimo passaggio prima della distribuzione. Chi tiene insieme la catena decide qualità, costi e tracciabilità, invece di subirli. E in un Paese che produce poco più di un terzo della carne bovina che consuma, avere la filiera in casa pesa.\n\nIl gruppo punta a passare da circa 350 a 500 milioni di ricavi.\n\nNella vostra filiera, qual è l'anello che non controllate e che vi preoccupa di più?\n\n#MergersAndAcquisitions #StrategiaAziendale #Agroalimentare #Filiera"
+ },
+ {
+  "date": "2026-10-16",
+  "deal": "GranTerre → Pimpernel Wharf",
+  "route": "Italia → Regno Unito · food",
+  "chiave": "Internazionalizzazione",
+  "lines": [
+   "Vendere fuori",
+   "non è ancora",
+   "esserci."
+  ],
+  "subtitle": "GranTerre compra il distributore inglese Pimpernel Wharf e arriva a una presenza diretta in sei mercati esteri.",
+  "left": {
+   "label": "ITALIA · GRANTERRE",
+   "value": "1,87 mld € di ricavi"
+  },
+  "right": {
+   "label": "REGNO UNITO · PIMPERNEL WHARF",
+   "value": "~20 mln € · dagli anni '60"
+  },
+  "levers": [
+   "Integrazione a valle",
+   "Presenza diretta",
+   "Internazionalizzazione"
+  ],
+  "source": "Il Sole 24 Ore",
+  "sintesi": "Chi esporta tramite importatori vende il prodotto, ma il cliente resta di qualcun altro. Comprando un distributore radicato, GranTerre porta in casa il rapporto con la grande distribuzione e la ristorazione inglese. Con oltre 600 milioni di ricavi esteri, presidiare direttamente i mercati diventa una scelta di gestione del rischio.",
+  "links": [
+   {
+    "label": "Il Sole 24 Ore",
+    "url": "https://en.ilsole24ore.com/art/grantterre-group-acquires-pimpernel-wharf-to-strengthen-its-presence-in-the-uk-AJg8TRiB"
+   }
+  ],
+  "post": "Esportare e stare davvero in un mercato sono due cose diverse.\n\nGranTerre, il gruppo cooperativo di Parmareggio e Parmacotto, ha comprato il 100% di Pimpernel Wharf, distributore inglese di formaggi e salumi con circa 20 milioni di ricavi. Così il gruppo ha una presenza diretta in sei mercati esteri, dagli Stati Uniti alla Svizzera.\n\nIl punto per me è questo. Chi esporta tramite importatori vende il prodotto, ma il cliente resta di qualcun altro. Comprare un distributore radicato vuol dire avere in casa il rapporto con supermercati e ristorazione, e accorgersi prima di cosa cambia sullo scaffale.\n\nQuando l'estero vale oltre 600 milioni di ricavi, lasciare quel rapporto a un intermediario diventa un rischio.\n\nE voi, il cliente estero lo conoscete di persona o attraverso qualcun altro?\n\n#MergersAndAcquisitions #StrategiaAziendale #Internazionalizzazione #FoodIndustry"
+ },
+ {
+  "date": "2026-10-15",
+  "deal": "Grafica Veneta → CPI Books e CPI Antony Rowe",
+  "route": "Italia → Regno Unito · stampa",
+  "chiave": "Internazionalizzazione",
+  "lines": [
+   "All'estero",
+   "non si va",
+   "una volta sola."
+  ],
+  "subtitle": "Grafica Veneta compra le attività inglesi di CPI: la terza acquisizione oltre confine in cinque anni.",
+  "left": {
+   "label": "ITALIA · GRAFICA VENETA",
+   "value": "~170 mln € di ricavi 2025"
+  },
+  "right": {
+   "label": "REGNO UNITO · CPI BOOKS",
+   "value": "~150 mln € · 7 stabilimenti"
+  },
+  "levers": [
+   "Internazionalizzazione",
+   "Produzione locale",
+   "Buy-and-build"
+  ],
+  "source": "MF Milano Finanza, VenetoEconomia",
+  "sintesi": "Terza acquisizione estera in cinque anni, con una logica costante: produrre nel mercato dove il libro si vende, comprando chi è già radicato lì. L'internazionalizzazione smette di essere una scommessa isolata e diventa una competenza che si ripete. Con questo passo l'80% dei ricavi del gruppo arriva dall'estero.",
+  "links": [
+   {
+    "label": "MF Milano Finanza",
+    "url": "https://www.milanofinanza.it/news/grafica-veneta-compra-in-uk-due-tipografie-con-150-milioni-di-giro-d-affari-202610132132356676"
+   },
+   {
+    "label": "VenetoEconomia",
+    "url": "https://www.venetoeconomia.it/2026/10/grafica-veneta-sbarca-nel-regno-unito-gv-group-rileva-cpi-books-e-cpi-antony-rowe-e-raddoppia/"
+   }
+  ],
+  "post": "Un gruppo nato a Padova che, da oggi, fa l'80% dei ricavi fuori dall'Italia.\n\nGrafica Veneta, attraverso la holding della famiglia Franceschi, ha comprato le attività inglesi di CPI: sette stabilimenti, oltre 100 milioni di libri l'anno, circa 150 milioni di ricavi. Il gruppo supera così i 300 milioni di fatturato.\n\nMi colpisce il metodo. È la terza acquisizione all'estero in cinque anni, dopo due negli Stati Uniti. E la logica è sempre la stessa: produrre nel mercato dove il libro si vende, comprando chi lì è già radicato.\n\nPer molte imprese familiari l'estero è una scommessa da fare una volta. Qui è diventata una competenza: ogni integrazione insegna qualcosa, e il passo successivo pesa meno.\n\nIl vostro primo deal all'estero lo vedete come un traguardo o come l'inizio di un percorso?\n\n#MergersAndAcquisitions #StrategiaAziendale #Internazionalizzazione #ImpreseFamiliari"
+ },
+ {
+  "date": "2026-10-14",
+  "deal": "Gruppo Everest (Vam Investments) → Ciemme Impianti, Corna Impianti, Project Group",
+  "route": "Italia · impiantistica",
+  "chiave": "Consolidamento",
+  "lines": [
+   "Da soli piccoli,",
+   "insieme",
+   "un'industria."
+  ],
+  "subtitle": "Gruppo Everest arriva a dieci aziende di impiantistica in meno di un anno. I fondatori restano alla guida e diventano soci del gruppo.",
+  "left": {
+   "label": "NOVEMBRE 2025 · NASCE EVEREST",
+   "value": "5 società"
+  },
+  "right": {
+   "label": "OTTOBRE 2026 · GRUPPO EVEREST",
+   "value": "10 società · ~500 addetti"
+  },
+  "levers": [
+   "Buy-and-build",
+   "Fondatori soci",
+   "Impianti e fotovoltaico"
+  ],
+  "source": "Financecommunity, MF Milano Finanza",
+  "sintesi": "Dieci imprese di impiantistica in meno di un anno, ciascuna troppo piccola per servire da sola un grande cliente industriale. Insieme offrono impianti elettrici, meccanici e fotovoltaico con un unico interlocutore. I fondatori restano alla guida come soci: vendono e continuano a lavorare su un progetto più grande, condividendone il risultato.",
+  "links": [
+   {
+    "label": "Financecommunity",
+    "url": "https://financecommunity.it/gli-advisor-del-gruppo-everest-nelle-acquisizioni-di-ciemme-impianti-corna-impianti-e-project-group/"
+   },
+   {
+    "label": "MF Milano Finanza",
+    "url": "https://www.milanofinanza.it/news/transizione-vam-crea-il-polo-everest-2684250"
+   }
+  ],
+  "post": "In meno di un anno, dieci imprese di impiantistica sono diventate un solo gruppo.\n\nÈ Gruppo Everest, la piattaforma creata da Vam Investments: in questi giorni ha aggiunto Ciemme Impianti e Corna Impianti, nel bergamasco, e Project Group, nel reggiano. Oggi conta circa 500 persone e oltre 150 milioni di ricavi proforma.\n\nSono aziende con 25, 40, 50 anni di storia. Da sole restano piccole; messe insieme possono offrire a un cliente industriale impianti elettrici, meccanici e fotovoltaico con un solo interlocutore.\n\nIl dettaglio che conta di più, per me, è un altro: i fondatori restano alla guida e diventano soci del gruppo. Vendono, ma continuano a lavorare su un progetto più grande e ne condividono il risultato.\n\nSe aveste un'azienda così, preferireste crescere da soli o diventare soci di qualcosa di più grande?\n\n#MergersAndAcquisitions #StrategiaAziendale #PrivateEquity #TransizioneEnergetica"
+ },
+ {
+  "date": "2026-10-13",
+  "deal": "Officine Maccaferri (Ambienta) → Iterchimica e Surface Tech",
+  "route": "Italia → Italia e USA · materiali per infrastrutture",
+  "chiave": "Riposizionamento tecnologico",
+  "lines": [
+   "Cambiare",
+   "cosa vendi,",
+   "non solo dove."
+  ],
+  "subtitle": "Maccaferri (Ambienta) compra Iterchimica e Surface Tech e crea una divisione di materiali ad alte prestazioni. I fondatori reinvestono e restano alla guida.",
+  "left": {
+   "label": "ITALIA · ITERCHIMICA",
+   "value": "Bergamo · dal 1967"
+  },
+  "right": {
+   "label": "USA · SURFACE TECH",
+   "value": "San Diego · dal 2013"
+  },
+  "levers": [
+   "Riposizionamento tecnologico",
+   "Internazionalizzazione",
+   "Fondatori che reinvestono"
+  ],
+  "source": "Teleborsa, Il Sole 24 Ore",
+  "sintesi": "L'acquisizione serve a cambiare cosa si vende, oltre che dove. Maccaferri compra due tecnologie per strade più durature, una per l'Europa e una per il Nord America, risparmiando anni di sviluppo interno. Il reinvestimento dei fondatori tiene in azienda il know-how appena acquistato, che è la parte più facile da perdere.",
+  "links": [
+   {
+    "label": "Teleborsa",
+    "url": "https://www.teleborsa.it/News/2026/10/06/ambienta-sgr-maccaferri-acquisisce-iterchimica-e-surface-tech-53.html"
+   },
+   {
+    "label": "Il Sole 24 Ore",
+    "url": "https://en.ilsole24ore.com/art/maccaferri-ambienta-acquires-iterchimica-and-surface-tech-AJIBhHbB"
+   }
+  ],
+  "post": "Un'azienda nata a Bologna nel 1879 ha deciso di cambiare cosa vende, oltre che dove lo vende.\n\nOfficine Maccaferri, controllata da Ambienta, ha comprato Iterchimica (Bergamo, additivi per asfalti, dal 1967) e l'americana Surface Tech (San Diego, rinforzi in fibra aramidica). Ne nasce una divisione di materiali ad alte prestazioni, e i fondatori reinvestono restando alla guida.\n\nQui l'acquisizione serve a portarsi in casa una tecnologia che, sviluppata da soli, avrebbe richiesto anni. Maccaferri ha già clienti in oltre 130 Paesi; le due società portano prodotti che allungano la vita delle strade, una in Europa e una negli Stati Uniti.\n\nPer me il dettaglio che conta è il reinvestimento dei fondatori: è il modo più semplice per tenere in azienda il know-how che hai appena comprato.\n\nVoi la prossima crescita la cercate con nuovi clienti o con un prodotto nuovo?\n\n#MergersAndAcquisitions #StrategiaAziendale #PrivateEquity #Infrastrutture"
+ },
+ {
+  "date": "2026-10-12",
+  "deal": "Morato Group → Jaus Bakery e CEA Italia",
+  "route": "Italia → Germania · bakery",
+  "chiave": "Consolidamento",
+  "lines": [
+   "Il pane",
+   "si fa vicino",
+   "al cliente."
+  ],
+  "subtitle": "Morato Group compra in Germania Jaus Bakery e CEA Italia: quindicesima acquisizione in otto anni, oltre 500 milioni di ricavi.",
+  "left": {
+   "label": "ITALIA · MORATO GROUP",
+   "value": ">500 mln € · 19 stabilimenti"
+  },
+  "right": {
+   "label": "GERMANIA · JAUS BAKERY",
+   "value": "2 stabilimenti · ~310 addetti"
+  },
+  "levers": [
+   "Buy-and-build",
+   "Internazionalizzazione",
+   "Produzione locale"
+  ],
+  "source": "Il Sole 24 Ore, BeBeez",
+  "sintesi": "Quindicesima acquisizione in otto anni con lo stesso socio finanziario: un metodo, più che una serie di occasioni. Nel pane la distanza dal cliente pesa su costi e freschezza, quindi per crescere in Germania serve una fabbrica in Germania. Le famiglie che vendono reinvestono nel gruppo, segno che credono nel piano.",
+  "links": [
+   {
+    "label": "Il Sole 24 Ore",
+    "url": "https://en.ilsole24ore.com/art/morato-group-expands-in-germany-a-centre-of-excellence-for-bakery-is-established-AJaoYObB"
+   },
+   {
+    "label": "BeBeez",
+    "url": "https://bebeez.it/private-equity/morato-group-compra-laltoatesina-cea-italia-e-la-redesca-jaus-creando-un-polo-europeo-del-bakery-da-piu-di-500-mln-di-ricavi/"
+   }
+  ],
+  "post": "Un panificio veneto nato nel 1970 da questo mese fa il pane anche in Baviera.\n\nMorato Group ha rilevato il 100% della tedesca Jaus Bakery e di CEA Italia, che ne distribuisce i prodotti da noi. Con loro il gruppo supera i 500 milioni di ricavi e conta 19 stabilimenti tra Italia, Spagna, Francia e Germania.\n\nQuello che mi colpisce è il metodo. È la quindicesima acquisizione in otto anni, fatta con lo stesso socio finanziario, Aliante Partners. E qui si compra una fabbrica vicino ai clienti, oltre al marchio. Nel pane la distanza conta: se vuoi crescere in un mercato, devi produrre lì.\n\nLe famiglie che vendono reinvestono nel gruppo. Mi sembra il segnale migliore: chi ha costruito quelle aziende ci crede ancora.\n\nVoi, nel vostro settore, avete un piano per crescere con le acquisizioni o andate avanti un'occasione alla volta?\n\n#MergersAndAcquisitions #StrategiaAziendale #BuyAndBuild #FoodIndustry"
+ }
+]</script>
+<script>
+(function(){
+  var posts=[];
+  try{posts=JSON.parse(document.getElementById('posts').textContent)}catch(e){posts=[]}
+  posts.sort(function(a,b){return a.date<b.date?1:-1});
+
+  var MESI=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+  function fmt(d){var p=d.split('-');return parseInt(p[2],10)+' '+MESI[parseInt(p[1],10)-1]+' '+p[0]}
+  function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
+
+  // connector drawn under the title: its shape tells the strategic lever
+  var G='#E9B44C';
+  var SHAPES={
+    'Internazionalizzazione':'<path d="M10 64 Q230 -18 450 64" fill="none" stroke="'+G+'" stroke-width="2.4" stroke-dasharray="7 7"/><circle cx="10" cy="64" r="7" fill="'+G+'"/><circle cx="450" cy="64" r="7" fill="'+G+'"/>',
+    'Consolidamento':'<path d="M10 12 L300 40 M10 40 L300 40 M10 68 L300 40" fill="none" stroke="'+G+'" stroke-width="2.4"/><path d="M300 40 L450 40" fill="none" stroke="'+G+'" stroke-width="2.4" stroke-dasharray="7 7"/><circle cx="10" cy="12" r="5" fill="'+G+'"/><circle cx="10" cy="40" r="5" fill="'+G+'"/><circle cx="10" cy="68" r="5" fill="'+G+'"/><circle cx="450" cy="40" r="8" fill="'+G+'"/>',
+    'Integrazione di filiera':'<path d="M18 40 L432 40" fill="none" stroke="'+G+'" stroke-width="2.4"/><circle cx="18" cy="40" r="9" fill="#13213A" stroke="'+G+'" stroke-width="2.4"/><circle cx="156" cy="40" r="9" fill="#13213A" stroke="'+G+'" stroke-width="2.4"/><circle cx="294" cy="40" r="9" fill="#13213A" stroke="'+G+'" stroke-width="2.4"/><circle cx="432" cy="40" r="9" fill="'+G+'"/>',
+    'Riposizionamento tecnologico':'<path d="M10 40 L220 40 C300 40 330 12 450 12 M220 40 C300 40 330 68 450 68" fill="none" stroke="'+G+'" stroke-width="2.4" stroke-dasharray="7 7"/><circle cx="10" cy="40" r="7" fill="'+G+'"/><circle cx="450" cy="12" r="6" fill="'+G+'"/><circle cx="450" cy="68" r="6" fill="'+G+'"/>',
+    'default':'<path d="M10 40 L450 40" fill="none" stroke="'+G+'" stroke-width="2.4" stroke-dasharray="7 7"/><circle cx="10" cy="40" r="7" fill="'+G+'"/><circle cx="450" cy="40" r="7" fill="'+G+'"/>'
+  };
+
+  function poster(p){
+    var box=el('div','poster');box.setAttribute('role','img');
+    box.setAttribute('aria-label',(p.lines||[]).join(' ')+' '+(p.subtitle||''));
+    var i=el('div','pin');
+    i.appendChild(el('div','p-rule'));
+    i.appendChild(el('div','p-label','M&A · STRATEGIA'));
+    var t=el('div','p-title');var L=p.lines||[];
+    L.forEach(function(line,ix){if(ix===L.length-1){t.appendChild(el('em',null,line))}else{t.appendChild(document.createTextNode(line));t.appendChild(document.createElement('br'))}});
+    i.appendChild(t);
+    i.appendChild(el('div','p-sub',p.subtitle||''));
+    var low=el('div','p-low');
+    var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.setAttribute('viewBox','0 0 460 80');svg.setAttribute('class','p-svg');svg.setAttribute('aria-hidden','true');
+    svg.innerHTML=SHAPES[p.chiave]||SHAPES['default'];
+    low.appendChild(svg);
+    var ends=el('div','p-ends');
+    [p.left,p.right].forEach(function(x){var d=el('div');d.appendChild(el('b',null,(x&&x.label)||''));d.appendChild(el('strong',null,(x&&x.value)||''));ends.appendChild(d)});
+    low.appendChild(ends);
+    var pills=el('div','p-pills');(p.levers||[]).forEach(function(l){pills.appendChild(el('span',null,l))});
+    low.appendChild(pills);
+    var f=el('div','p-foot');var a=el('span');a.appendChild(el('b',null,'Sante Maiolica'));a.appendChild(document.createTextNode(' · M&A Insight'));
+    f.appendChild(a);f.appendChild(el('span',null,'Fonte: '+(p.source||'')));
+    low.appendChild(f);
+    i.appendChild(low);box.appendChild(i);
+    return box;
+  }
+
+  function card(p,n){
+    var a=el('article');a.style.animationDelay=Math.min(n,6)*60+'ms';
+    a.appendChild(poster(p));
+    var m=el('div','meta');var tm=el('time',null,fmt(p.date));tm.setAttribute('datetime',p.date);
+    m.appendChild(tm);m.appendChild(el('span','k',p.chiave||''));a.appendChild(m);
+    a.appendChild(el('h2',null,p.deal||''));
+    if(p.route)a.appendChild(el('div','route',p.route));
+    a.appendChild(el('p','sintesi',p.sintesi||''));
+    if(p.links&&p.links.length){var ls=el('div','links');p.links.forEach(function(k){var x=el('a',null,k.label+' ↗');x.href=k.url;x.target='_blank';x.rel='noopener';ls.appendChild(x)});a.appendChild(ls)}
+    if(p.post){
+      var d=el('details');d.appendChild(el('summary',null,'Il post pubblicato'));
+      var tx=el('div','post',p.post);d.appendChild(tx);
+      var b=el('button','copy','Copia il testo');b.type='button';
+      b.addEventListener('click',function(){
+        var done=function(){b.textContent='Copiato';setTimeout(function(){b.textContent='Copia il testo'},1600)};
+        var sel=function(){var r=document.createRange();r.selectNodeContents(tx);var s=window.getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Testo selezionato'};
+        try{navigator.clipboard.writeText(p.post).then(done,sel)}catch(e){sel()}
+      });
+      d.appendChild(b);a.appendChild(d);
+    }
+    return a;
+  }
+
+  var grid=document.getElementById('grid'),bar=document.getElementById('bar');
+  var ORDER=['Internazionalizzazione','Consolidamento','Integrazione di filiera','Riposizionamento tecnologico','Capitale e fondatori'];
+  var counts={};posts.forEach(function(p){counts[p.chiave]=(counts[p.chiave]||0)+1});
+  var keys=ORDER.filter(function(k){return counts[k]}).concat(Object.keys(counts).filter(function(k){return ORDER.indexOf(k)<0}));
+  var current='Tutte';try{var s=localStorage.getItem('mai-filter');if(s&&(s==='Tutte'||counts[s]))current=s}catch(e){}
+  var countEl=el('span','count');
+
+  function render(){
+    grid.textContent='';
+    var list=posts.filter(function(p){return current==='Tutte'||p.chiave===current});
+    if(!list.length){grid.appendChild(el('p','empty','Nessun post per questa chiave.'))}
+    list.forEach(function(p,n){grid.appendChild(card(p,n))});
+    countEl.textContent=list.length+(list.length===1?' operazione':' operazioni');
+    Array.prototype.forEach.call(bar.querySelectorAll('.chip'),function(c){c.setAttribute('aria-pressed',c.dataset.k===current?'true':'false')});
+  }
+  ['Tutte'].concat(keys).forEach(function(k){
+    var c=el('button','chip',k);c.type='button';c.dataset.k=k;
+    c.appendChild(el('span',null,String(k==='Tutte'?posts.length:counts[k])));
+    c.addEventListener('click',function(){current=k;try{localStorage.setItem('mai-filter',k)}catch(e){}render()});
+    bar.appendChild(c);
+  });
+  bar.appendChild(countEl);
+  render();
+})();
+</script>
 </body>
 </html>
