@@ -120,7 +120,8 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);font-si
   <footer>Commenti su operazioni comunicate da fonti pubbliche, citate in ogni scheda. Nessun giudizio sul prezzo né indicazione di investimento.</footer>
 </div>
 
-<script type="application/json" id="posts">[
+<script type="application/json" id="posts">[]</script>
+<script type="application/json" id="archivio">[
  {
   "date": "2026-11-09",
   "deal": "Mare Group → Proser",
@@ -1264,7 +1265,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);font-si
 <script>
 (function(){
   var posts=[];
-  try{posts=JSON.parse(document.getElementById('posts').textContent)}catch(e){posts=[]}
+  // two data blocks: "archivio" (all posts up to a date, refreshed monthly with the newsletter) and "posts" (recent posts, injected daily from Drive). Same date: "posts" wins.
+  function block(id){try{var n=document.getElementById(id);return n?JSON.parse(n.textContent):[]}catch(e){return []}}
+  var byDate={};block('archivio').concat(block('posts')).forEach(function(p){if(p&&p.date)byDate[p.date]=p});
+  posts=Object.keys(byDate).map(function(k){return byDate[k]});
   posts.sort(function(a,b){return a.date<b.date?1:-1});
 
   var MESI=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
